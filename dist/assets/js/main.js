@@ -8,4 +8,10 @@ $(".fancybox").fancybox();
 //$.fancybox( '<h1>Lorem lipsum</h1>' );
 //$.fancybox.open('#modal-1');
 
+// Кнопка каталога в меню
+$('.inner-menu').click(function(event) {
+	event.preventDefault();
+	$(this).toggleClass('open');
+});
+
 });
