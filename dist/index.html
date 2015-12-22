@@ -3,6 +3,24 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<!-- favicon -->
+	<link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="assets/img/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
 	<!-- Styles -->
 	<link rel="stylesheet" type="text/css" href="assets/css/main.min.css" />
 	<!-- Add fancyBox -->
@@ -10,6 +28,8 @@
 	<!-- Optionally add helpers - button, thumbnail and/or media -->
 	<link rel="stylesheet" href="assets/modules/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
 	<link rel="stylesheet" href="assets/modules/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+	<!-- SlickSlider -->
+	<link rel="stylesheet" type="text/css" href="assets/modules/slick/slick.css"/>
 </head>
 <body>
 	<header>
@@ -118,8 +138,9 @@
 					</li>
 				</ul>
 			</nav>
+			<!-- user nav -->
 			<div class="user-nav">
-				<ul>
+				<ul class="user-nav-list">
 					<li>
 						<a href="#">
 							<i class="icon i-basket">
@@ -141,7 +162,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="#">
+						<a href="#" class="go-to-cart">
 							<i class="icon i-basket">
 								<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 									 width="348.047px" height="348.047px" viewBox="0 0 348.047 348.047" style="enable-background:new 0 0 348.047 348.047;"
@@ -191,7 +212,198 @@
 					</li>
 				</ul>
 				<div class="search-btn"></div>
+				<!-- basket popup -->
+				<div class="basket-main-popup">
+					<!-- slider -->
+					<div class="slick-arrow-btn slick-prev"></div>
+					<div id="basket-popup-slider" class="basket-main-popup__slider">
+						<div class="basket-main-popup__slide">
+							<!-- cell -->
+							<div class="basket-main-popup__product-cell">
+								<ul>
+									<li>
+										<div class="basket-main-popup__product-cell__img">
+											<img src="https://image.freepik.com/free-icon/video-camera_318-49881.png" alt="product">
+										</div>
+									</li>
+									<li>
+										<p class="basket-main-popup__product-cell__text name">
+											Jade S82938-3
+										</p>
+										<p class="basket-main-popup__product-cell__text type">
+											торшер
+										</p>
+										<p class="basket-main-popup__product-cell__text price">
+											цена <span>4900 P</span>
+										</p>
+									</li>
+									<li>
+										<p class="basket-main-popup__product-cell__text quantity">
+											<span>1</span> шт.
+										</p>
+										<a href="#" class="basket-popup-close-btn"></a>
+									</li>
+								</ul>
+							</div>
+							<!-- /cell -->
+						</div>
+						<div class="basket-main-popup__slide">
+							<!-- cell -->
+							<div class="basket-main-popup__product-cell">
+								<ul>
+									<li>
+										<div class="basket-main-popup__product-cell__img">
+											<img src="https://yt3.ggpht.com/-O2pWB5rnPtU/AAAAAAAAAAI/AAAAAAAAAAA/ogPef_qsJ94/s900-c-k-no/photo.jpg" alt="product">
+										</div>
+									</li>
+									<li>
+										<p class="basket-main-popup__product-cell__text name">
+											Jade S82938-3
+										</p>
+										<p class="basket-main-popup__product-cell__text type">
+											торшер
+										</p>
+										<p class="basket-main-popup__product-cell__text price">
+											цена <span>4900 P</span>
+										</p>
+									</li>
+									<li>
+										<p class="basket-main-popup__product-cell__text quantity">
+											<span>2</span> шт.
+										</p>
+										<a href="#" class="basket-popup-close-btn"></a>
+									</li>
+								</ul>
+							</div>
+							<!-- /cell -->
+						</div>
+						<div class="basket-main-popup__slide">
+							<!-- cell -->
+							<div class="basket-main-popup__product-cell">
+								<ul>
+									<li>
+										<div class="basket-main-popup__product-cell__img">
+											<img src="https://image.freepik.com/free-icon/video-camera_318-49881.png" alt="product">
+										</div>
+									</li>
+									<li>
+										<p class="basket-main-popup__product-cell__text name">
+											Jade S82938-3
+										</p>
+										<p class="basket-main-popup__product-cell__text type">
+											торшер
+										</p>
+										<p class="basket-main-popup__product-cell__text price">
+											цена <span>4900 P</span>
+										</p>
+									</li>
+									<li>
+										<p class="basket-main-popup__product-cell__text quantity">
+											<span>3</span> шт.
+										</p>
+										<a href="#" class="basket-popup-close-btn"></a>
+									</li>
+								</ul>
+							</div>
+							<!-- /cell -->
+						</div>
+						<div class="basket-main-popup__slide">
+							<!-- cell -->
+							<div class="basket-main-popup__product-cell">
+								<ul>
+									<li>
+										<div class="basket-main-popup__product-cell__img">
+											<img src="https://image.freepik.com/free-icon/video-camera_318-49881.png" alt="product">
+										</div>
+									</li>
+									<li>
+										<p class="basket-main-popup__product-cell__text name">
+											Jade S82938-3
+										</p>
+										<p class="basket-main-popup__product-cell__text type">
+											торшер
+										</p>
+										<p class="basket-main-popup__product-cell__text price">
+											цена <span>4900 P</span>
+										</p>
+									</li>
+									<li>
+										<p class="basket-main-popup__product-cell__text quantity">
+											<span>4</span> шт.
+										</p>
+										<a href="#" class="basket-popup-close-btn"></a>
+									</li>
+								</ul>
+							</div>
+							<!-- /cell -->
+						</div>
+						<div class="basket-main-popup__slide">
+							<!-- cell -->
+							<div class="basket-main-popup__product-cell">
+								<ul>
+									<li>
+										<div class="basket-main-popup__product-cell__img">
+											<img src="https://yt3.ggpht.com/-68XseAvyJYY/AAAAAAAAAAI/AAAAAAAAAAA/yNBAhTO1Zbo/s900-c-k-no/photo.jpg" alt="product">
+										</div>
+									</li>
+									<li>
+										<p class="basket-main-popup__product-cell__text name">
+											Jade S82938-3
+										</p>
+										<p class="basket-main-popup__product-cell__text type">
+											торшер
+										</p>
+										<p class="basket-main-popup__product-cell__text price">
+											цена <span>4900 P</span>
+										</p>
+									</li>
+									<li>
+										<p class="basket-main-popup__product-cell__text quantity">
+											<span>5</span> шт.
+										</p>
+										<a href="#" class="basket-popup-close-btn"></a>
+									</li>
+								</ul>
+							</div>
+							<!-- /cell -->
+						</div>
+					</div>
+					<div class="slick-arrow-btn slick-next"></div>
+					<!-- /slider -->
+					<ul class="basket-main-popup__link-and-result">
+						<li>
+							<a href="#">
+								<i class="icon i-eye">
+									<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+										 viewBox="0 0 28.649 28.649" style="enable-background:new 0 0 28.649 28.649;" xml:space="preserve">
+										<g>
+											<g>
+												<path d="M27.598,12.511C24.835,10.265,20.19,7,14.342,6.89c-0.006,0-0.012,0-0.018,0s-0.012,0-0.018,0
+													C8.464,7.002,3.812,10.265,1.052,12.511C0.92,12.62,0.016,13.311,0,14.198c-0.011,0.624,0.28,1.085,0.699,1.47
+													c2.255,2.182,7.176,6.059,13.609,6.088v0.002c0.006,0,0.012,0,0.018,0c0.005,0,0.011,0,0.018,0v-0.002
+													c6.445-0.029,11.354-3.906,13.607-6.088c0.418-0.385,0.708-0.846,0.697-1.47C28.632,13.311,27.73,12.62,27.598,12.511z
+													 M14.326,20.078c-3.162-0.021-5.719-2.59-5.719-5.756c0-3.167,2.557-5.735,5.719-5.755c3.17,0.02,5.718,2.589,5.718,5.755
+													S17.497,20.057,14.326,20.078z"/>
+												<path d="M14.344,12.085c-0.006-0.001-0.012-0.001-0.018-0.001s-0.012,0-0.018,0v0.001
+													c-1.21,0.03-2.186,1.021-2.186,2.237c0,1.217,0.975,2.208,2.186,2.235v0.002c0.006,0,0.012-0.002,0.018-0.002
+													c0.005,0,0.011,0.002,0.018,0.002v-0.002c1.222-0.027,2.186-1.02,2.186-2.235C16.526,13.104,15.563,12.115,14.344,12.085z"/>
+											</g>
+										</g>
+									</svg>
+								</i>
+								<span>К корзине</span>
+							</a>
+						</li>
+						<li>
+							<p>ИТОГО <span>17 800 Р</span></p>
+						</li>
+					</ul>
+					<!--  -->
+					<a href="#" class="btn basket-main-popup__btn">ОФОРМИТЬ ЗАКАЗ</a>
+				</div>
+				<!-- /basket popup -->
 			</div>
+			<!-- /user nav -->
 		</div>
 	</header>
 	<a href="uikit.html">uikit</a>
@@ -214,6 +426,10 @@
 	<script type="text/javascript" src="assets/modules/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
 	
 	<script type="text/javascript" src="assets/modules/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+	
+	<!-- Slick Slider -->
+	
+	<script type="text/javascript" src="assets/modules/slick/slick.min.js"></script>
 	
 	<!-- Main JS -->
 	<script type="text/javascript" src="assets/js/main.js"></script>
