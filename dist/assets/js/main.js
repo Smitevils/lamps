@@ -67,6 +67,17 @@ bmp.hover(function() {
 	bmp.removeClass('open');
 });
 
+// show search window
+
+$('.search-btn').click(function(event) {
+	event.preventDefault();
+	$('.search-window').addClass('open');
+});
+$('.search-window__close-wrap').click(function(event) {
+	event.preventDefault();
+	$('.search-window').removeClass('open');
+});
+
 
 
 });
