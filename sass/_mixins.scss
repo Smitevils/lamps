@@ -1,0 +1,53 @@
+@mixin Transition-All-06s {
+	transition: all 0.6s;
+}
+
+@mixin Transition-All-1s {
+	transition: all 1s;
+}
+
+@mixin Transition-All-03s {
+	transition: all 0.3s;
+}
+
+@mixin Transition-Background-03s {
+	transition: background 0.3s, fill 0.3s;
+}
+
+@mixin Transition-Font-03s {
+	transition: font 0.3s;
+}
+
+@mixin Transition-Color-03s {
+	transition: color 0.3s;
+}
+
+@mixin Transition-Opacity-03s {
+	transition: opacity 0.3s;
+}
+
+@mixin NoSelect {
+	-moz-user-select: -moz-none;
+	-o-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+@mixin Display-Flex-Center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin Display-Flex-Center-Left {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+@mixin Display-Flex-Center-Right {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
