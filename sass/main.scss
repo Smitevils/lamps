@@ -16,7 +16,7 @@ body {
 a {color: $font-color-1; text-decoration: none;}
 a:hover {text-decoration: underline;}
 
-//* {outline: 1px dashed yellowgreen};
+* {outline: 1px dashed yellowgreen};
 
 .slick-slide {
 	outline: none;
@@ -86,7 +86,7 @@ a:hover {text-decoration: underline;}
 		font-size: 70px;
 		color: $font-color-3;
 		padding: 20px 100px 20px 0px;
-		font-weight: 100;
+		font-weight: 200;
 		background: url(../img/svg/search-bg.svg) no-repeat center right;
 		background-size: 80px;
 	}
@@ -103,6 +103,9 @@ a:hover {text-decoration: underline;}
 	display: inline-block;
 	text-align: center;
 	text-decoration: none;
+	//
+	&:hover {text-decoration: none;}
+	&:active {text-decoration: none;}
 }
 
 .modal-window {display: none;}
@@ -243,6 +246,7 @@ header {
 				display: none;
 				background: $bg-color-2;
 				color: $font-color-2;
+				z-index: 9999;
 				//
 				li {
 					display: block; height: 56px; min-width: 230px;
@@ -383,6 +387,20 @@ header {
 	width: 15px; height: 15px; margin-right: 10px;
 	//
 	object {width: 100%; height: 100%;}
+}
+
+.i-social, .i-phone {
+	width: 34px; height: 34px;
+	fill: $bg-color-9;
+	//
+	&:hover {
+		fill: $bg-color-8;
+	}
+}
+
+.i-category {
+	width: 34px; height: 34px;
+	fill: $bg-color-9;
 }
 
 /* upper count */
@@ -588,9 +606,9 @@ header {
 		}
 	}
 }
-.basket-main-popup__product-cell__text.type {font-weight: 100; font-size: 14px; text-indent: nowrap; white-space: nowrap; overflow: hidden;}
+.basket-main-popup__product-cell__text.type {font-weight: 200; font-size: 14px; text-indent: nowrap; white-space: nowrap; overflow: hidden;}
 .basket-main-popup__product-cell__text.price {
-	font-weight: 100; font-size: 14px; color: $font-color-4;
+	font-weight: 200; font-size: 14px; color: $font-color-4;
 	margin: 10px 0 0 0;
 	//
 	span {
@@ -599,7 +617,7 @@ header {
 	}
 }
 .basket-main-popup__product-cell__text.quantity {
-	font-weight: 100; font-size: 14px; padding: 0px;
+	font-weight: 200; font-size: 14px; padding: 0px;
 	//
 	span {font-weight: 600;}
 }
@@ -679,7 +697,7 @@ input {outline: none;}
 		font-size: 12px;
 		@include Transition-All-06s;
 	}
-	input[type="text"]:hover {
+	input[type="text"]:hover, input[type="text"]:focus {
 		background-color: $bg-color-4;
 	}
 	input[type="submit"] {
@@ -703,7 +721,7 @@ input {outline: none;}
 .title {
 	text-align: center; padding: 20px 0;
 	//
-	h2 {
+	h3 {
 		font-weight: 600; font-size: 30px; letter-spacing: 3px; margin: 0;
 	}
 }
@@ -724,6 +742,8 @@ input {outline: none;}
 }
 
 .logo {display: inline-block;}
+
+.logo + h1 {margin: 4px 0; font-size: 14px;}
 
 .social-links {
 	display: inline-block; padding: 0; margin: 0; font-size: 0;
@@ -807,4 +827,73 @@ input {outline: none;}
 			color: $font-color-1;
 		}
 	}
+}
+
+/* Блоки 3-х главных категорий на главной и выпадающее меню */
+
+.category-main-container {
+	position: relative;
+}
+
+.category-main-block {
+	width: 100%; height: 336px; position: relative; vertical-align: top;
+	box-sizing: border-box; padding-right: 6px;
+	//
+	&:before {
+		content: "";
+		display: inline-block; width: 220px; height: 100%;
+		background-color: $bg-color-10;
+		position: absolute; top: 0; left: 0;
+	}
+	//
+	img {
+		width: 100%; height: 100%;
+		object-fit: cover;
+	}
+}
+.category-main-block__text {
+	padding: 36px; position: absolute; top: 0; left: 0;
+	//
+	h2 {
+		font-weight: 600; font-size: 30px; letter-spacing: 3px; margin-top: 0; margin-bottom: 16px; position: relative;
+		//
+		&:after {
+			content: "";
+			display: block;
+			width: 30px; height: 1px;
+			background-color: $font-color-1;
+			margin-top: 12px;
+			//position: absolute; top: 0; left: 0;
+		}
+	}
+	p {
+		font-weight: 100;
+	}
+}
+
+.category-main-block__menu {
+	display: none;
+	//
+	width: 100%;
+	min-height: 100px;
+	position: absolute; top: 130px; left: 0;
+	background-color: $bg-color-6;
+}
+
+.category-main-block__menu_link {
+	display: inline-block; @include Transition-All-03s; padding: 34px;
+	//
+	span {margin-left: 14px;}
+	svg, span {@include Transition-All-03s;}
+	//
+	a {display: inline-block; color: $font-color-1; font-size: 12px; letter-spacing: 2px; font-weight: 800; text-transform: uppercase;}
+	a:hover {text-decoration: none;}
+	a:hover svg, a:hover span {fill: $bg-color-8; color: $bg-color-8;}
+}
+
+/* animation */
+
+.animation__show-menu {
+	animation: show-hide-menu 0.5s ease-in-out;
+	@include Transition-All-03s;
 }

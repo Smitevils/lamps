@@ -1,3 +1,15 @@
+/* font-family: "ProximaNovaT-Thin"; */
+@font-face {
+	font-family: "ProximaNova";
+	src: url("../fonts/ProximaNova/ProximaNovaThin/ProximaNovaT-Thin.eot");
+	src: url("../fonts/ProximaNova/ProximaNovaThin/ProximaNovaT-Thin.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/ProximaNova/ProximaNovaThin/ProximaNovaT-Thin.woff") format("woff"),
+	url('../fonts/ProximaNova/ProximaNovaThin/ProximaNovaT-Thin.woff2') format('woff2'), 
+	url("../fonts/ProximaNova/ProximaNovaThin/ProximaNovaT-Thin.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 100;
+}
+
 /* font-family: "ProximaNovaLight"; */
 @font-face {
 	font-family: "ProximaNova";
@@ -7,7 +19,7 @@
 	url('../fonts/ProximaNova/ProximaNovaLight/ProximaNova-Light.woff2') format('woff2'), 
 	url("../fonts/ProximaNova/ProximaNovaLight/ProximaNova-Light.ttf") format("truetype");
 	font-style: normal;
-	font-weight: 100;
+	font-weight: 200;
 }
 
 /* font-family: "ProximaNova"; */
