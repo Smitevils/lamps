@@ -874,10 +874,11 @@ input {outline: none;}
 .category-main-block__menu {
 	display: none;
 	//
-	width: 100%;
+	width: 1280px;
 	min-height: 100px;
 	position: absolute; top: 130px; left: 0;
 	background-color: $bg-color-6;
+	//
 }
 
 .category-main-block__menu_link {
