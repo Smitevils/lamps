@@ -1,5 +1,13 @@
 $(document).ready(function() {
 
+/* Кастомный скролл */
+
+$(window).load(function(){
+	$(".category-main-block__menu__basic").mCustomScrollbar();
+	//$(".category-main-block__menu__submenu").mCustomScrollbar();
+	$(".category-main-block__menu__submenu__content").mCustomScrollbar();
+});
+
 // Подключаем fancybox
 $(".fancybox").fancybox();
 //$.fancybox.open("http://www.vsevgallery.ru/img/bPIC/201104/201104343574.jpg")
@@ -82,40 +90,89 @@ $('.search-window__close-wrap').click(function(event) {
 
 //$('[data-category-main-menu]').hide();
 
+
+/**/
 $('[data-category-main="1"]').hover(function() {
-	$('[data-category-main-menu="1"]').show()
+	$('[data-category-main-menu="1"]').addClass('open');
+	$('[data-category-main!="1"]').addClass('hover');
 }, function() {
-	$('[data-category-main-menu="1"]').hide();
+	if ($('[data-category-main-menu="1"]').is(':hover')) {
+		return;
+	} else {
+		$('[data-category-main-menu="1"]').removeClass('open');
+		$('[data-category-main!="1"]').removeClass('hover');
+	}
 });
 
 $('[data-category-main-menu="1"]').hover(function() {
-	$('[data-category-main-menu="1"]').show();
+	return;
 }, function() {
-	$('[data-category-main-menu="1"]').hide();
+	if ($('[data-category-main="1"]').is(':hover')) {
+		return;
+	} else {
+		$('[data-category-main-menu="1"]').removeClass('open');
+		$('[data-category-main!="1"]').removeClass('hover')
+	}
 });
-
+/**/
 $('[data-category-main="2"]').hover(function() {
-	$('[data-category-main-menu="2"]').show()
+	$('[data-category-main-menu="2"]').addClass('open');
+	$('[data-category-main!="2"]').addClass('hover');
 }, function() {
-	$('[data-category-main-menu="2"]').hide();
+	if ($('[data-category-main-menu="2"]').is(':hover')) {
+		return;
+	} else {
+		$('[data-category-main-menu="2"]').removeClass('open');
+		$('[data-category-main!="2"]').removeClass('hover');
+	}
 });
 
 $('[data-category-main-menu="2"]').hover(function() {
-	$('[data-category-main-menu="2"]').show();
+	return;
 }, function() {
-	$('[data-category-main-menu="2"]').hide();
+	if ($('[data-category-main="2"]').is(':hover')) {
+		return;
+	} else {
+		$('[data-category-main-menu="2"]').removeClass('open');
+		$('[data-category-main!="2"]').removeClass('hover');
+	}
 });
-
+/**/
 $('[data-category-main="3"]').hover(function() {
-	$('[data-category-main-menu="3"]').show()
+	$('[data-category-main-menu="3"]').addClass('open');
+	$('[data-category-main!="3"]').addClass('hover');
 }, function() {
-	$('[data-category-main-menu="3"]').hide();
+	if ($('[data-category-main-menu="3"]').is(':hover')) {
+		return;
+	} else {
+		$('[data-category-main-menu="3"]').removeClass('open');
+		$('[data-category-main!="3"]').removeClass('hover');
+	}
 });
 
 $('[data-category-main-menu="3"]').hover(function() {
-	$('[data-category-main-menu="3"]').show();
+	return;
 }, function() {
-	$('[data-category-main-menu="3"]').hide();
+	if ($('[data-category-main="3"]').is(':hover')) {
+		return;
+	} else {
+		$('[data-category-main-menu="3"]').removeClass('open');
+		$('[data-category-main!="3"]').removeClass('hover');
+	}
+});
+/**/
+
+$('[data-open-submenu]').click(function(event) {
+	event.preventDefault();
+	var submenu_number = $(this).data('open-submenu');
+	$(this).parents('.category-main-block__menu').find('.category-main-block__menu__basic').css('left', '-100%');
+	$(this).parents('.category-main-block__menu').find('[data-submenu="'+submenu_number+'"]').css('left', '0%');
+});
+
+$('.category-main-block__menu__submenu__back').click(function(event) {
+	event.preventDefault();
+	$(this).parents('.category-main-block__menu').find('.category-main-block__menu__basic').css('left', '0%');
+	$(this).parents('.category-main-block__menu').find('[data-submenu]').css('left', '100%');
 });
 
 
