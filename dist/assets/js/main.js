@@ -94,13 +94,13 @@ $('.search-window__close-wrap').click(function(event) {
 /**/
 $('[data-category-main="1"]').hover(function() {
 	$('[data-category-main-menu="1"]').addClass('open');
-	$('[data-category-main!="1"]').addClass('hover');
+	$('[data-category-main="2"], [data-category-main="3"]').addClass('hover');
 }, function() {
 	if ($('[data-category-main-menu="1"]').is(':hover')) {
 		return;
 	} else {
 		$('[data-category-main-menu="1"]').removeClass('open');
-		$('[data-category-main!="1"]').removeClass('hover');
+		$('[data-category-main]').removeClass('hover');
 	}
 });
 
@@ -111,19 +111,19 @@ $('[data-category-main-menu="1"]').hover(function() {
 		return;
 	} else {
 		$('[data-category-main-menu="1"]').removeClass('open');
-		$('[data-category-main!="1"]').removeClass('hover')
+		$('[data-category-main]').removeClass('hover')
 	}
 });
 /**/
 $('[data-category-main="2"]').hover(function() {
 	$('[data-category-main-menu="2"]').addClass('open');
-	$('[data-category-main!="2"]').addClass('hover');
+	$('[data-category-main="1"], [data-category-main="3"]').addClass('hover');
 }, function() {
 	if ($('[data-category-main-menu="2"]').is(':hover')) {
 		return;
 	} else {
 		$('[data-category-main-menu="2"]').removeClass('open');
-		$('[data-category-main!="2"]').removeClass('hover');
+		$('[data-category-main]').removeClass('hover');
 	}
 });
 
@@ -134,19 +134,19 @@ $('[data-category-main-menu="2"]').hover(function() {
 		return;
 	} else {
 		$('[data-category-main-menu="2"]').removeClass('open');
-		$('[data-category-main!="2"]').removeClass('hover');
+		$('[data-category-main]').removeClass('hover');
 	}
 });
 /**/
 $('[data-category-main="3"]').hover(function() {
 	$('[data-category-main-menu="3"]').addClass('open');
-	$('[data-category-main!="3"]').addClass('hover');
+	$('[data-category-main="1"], [data-category-main="2"]').addClass('hover');
 }, function() {
 	if ($('[data-category-main-menu="3"]').is(':hover')) {
 		return;
 	} else {
 		$('[data-category-main-menu="3"]').removeClass('open');
-		$('[data-category-main!="3"]').removeClass('hover');
+		$('[data-category-main]').removeClass('hover');
 	}
 });
 
@@ -157,7 +157,7 @@ $('[data-category-main-menu="3"]').hover(function() {
 		return;
 	} else {
 		$('[data-category-main-menu="3"]').removeClass('open');
-		$('[data-category-main!="3"]').removeClass('hover');
+		$('[data-category-main]').removeClass('hover');
 	}
 });
 /**/
