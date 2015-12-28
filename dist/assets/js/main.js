@@ -79,11 +79,15 @@ bmp.hover(function() {
 
 $('.search-btn').click(function(event) {
 	event.preventDefault();
+	//открываем окно поиска
 	$('.search-window').addClass('open');
+	$('body').css('overflow', 'hidden');
 });
 $('.search-window__close-wrap').click(function(event) {
 	event.preventDefault();
+	//прячем окно поиска
 	$('.search-window').removeClass('open');
+	$('body').css('overflow', 'auto');
 });
 
 // открытие меню категорий на главной
