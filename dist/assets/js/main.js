@@ -179,5 +179,25 @@ $('.category-main-block__menu__submenu__back').click(function(event) {
 	$(this).parents('.category-main-block__menu').find('[data-submenu]').css('left', '100%');
 });
 
+/* Слайдер новинок */
+
+$('.novelty-slider').slick({
+	infinite: true,
+	speed: 500,
+	slidesToShow: 4,
+	slidesToScroll: 4,
+	prevArrow: '<button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="display: block;"></button>',
+	nextArrow: '<button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;"></button>'
+});
+
+$('.bestsellers-slider').slick({
+	infinite: true,
+	speed: 500,
+	slidesToShow: 4,
+	slidesToScroll: 4,
+	prevArrow: '<button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="display: block;"></button>',
+	nextArrow: '<button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;"></button>'
+});
+
 
 });
