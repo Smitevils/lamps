@@ -10,6 +10,15 @@
 	transition: all 0.3s;
 }
 
+@mixin Transition-position-03s {
+	transition: left 0.3s;
+}
+
+
+@mixin Transition-All-01s {
+	transition: all 0.1s;
+}
+
 @mixin Transition-Background-03s {
 	transition: background 0.3s, fill 0.3s;
 }

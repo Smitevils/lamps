@@ -23,6 +23,7 @@
     "gulp-cssmin": "^0.1.7",
     "gulp-minify-css": "^1.2.2",
     "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
     "gulp-rigger": "^0.5.8",
     "gulp-sass": "^2.1.0",
     "gulp-sourcemaps": "^1.6.0",
@@ -33,8 +34,8 @@
     "imagemin-pngquant": "^4.2.0",
     "merge-stream": "^1.0.0",
     "stylelint": "^2.3.1",
+    "tabtab.js": "^0.1.3",
     "vinyl-buffer": "^1.0.0",
-    "vinyl-ftp": "^0.4.5",
-    "gulp-rename": "^1.2.2"
+    "vinyl-ftp": "^0.4.5"
   }
 }

@@ -199,5 +199,41 @@ $('.bestsellers-slider').slick({
 	nextArrow: '<button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;"></button>'
 });
 
+//
+
+$('.btn__main-filter-search').on('click', function(event) {
+	event.preventDefault();
+	/* Act on the event */
+	$('.main-filter__container').slideToggle("fast");
+});
+
+/* tabtab.js */
+$('.tabs').tabtab({
+	tabMenu: '.tabs__menu',             // direct container of the tab menu items
+	tabContent: '.tabs__content',       // direct container of the tab content items
+	//next: '.tabs-controls__next',       // next slide trigger
+	//prev: '.tabs-controls__prev',       // previous slide trigger
+
+	startSlide: 1,                      // starting slide on pageload
+	arrows: true,                       // keyboard arrow navigation
+	dynamicHeight: true,                // if true the height will dynamic and animated.
+	useAnimations: true,                // disables animations.
+
+	easing: 'ease',                     // http://julian.com/research/velocity/#easing
+	speed: 350,                         // animation speed
+	slideDelay: 0,                      // delay the animation
+	perspective: 1200,                  // set 3D perspective
+	transformOrigin: 'center top',      // set the center point of the 3d animation
+	perspectiveOrigin: '50% 50%',       // camera angle
+
+	translateY: 0,                      // animate along the Y axis (val: px or ‘slide’)
+	translateX: 0,                      // animate along the X axis (val: px or ‘slide’)
+	scale: 1,                           // animate scale (val: 0-2)
+	rotateX: 90,                        // animate rotation (val: 0deg-360deg)
+	rotateY: 0,                         // animate Y acces rotation (val: 0deg-360deg)
+	skewY: 0,                           // animate Y skew (val: 0deg-360deg)
+	skewX: 0,                           // animate X skew (val: 0deg-360deg)
+});
+
 
 });
