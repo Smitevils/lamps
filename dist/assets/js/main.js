@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+
 /* Кастомный скролл */
 
 $(window).load(function(){
@@ -208,7 +209,7 @@ $('.btn__main-filter-search').on('click', function(event) {
 });
 
 /* tabtab.js */
-$('.tabs').tabtab({
+$('.animate-tabs .tabs').tabtab({
 	tabMenu: '.tabs__menu',             // direct container of the tab menu items
 	tabContent: '.tabs__content',       // direct container of the tab content items
 	//next: '.tabs-controls__next',       // next slide trigger
@@ -217,6 +218,7 @@ $('.tabs').tabtab({
 	startSlide: 1,                      // starting slide on pageload
 	arrows: true,                       // keyboard arrow navigation
 	dynamicHeight: true,                // if true the height will dynamic and animated.
+	fixedHeight: false,                 // fixedHeight
 	useAnimations: true,                // disables animations.
 
 	easing: 'ease',                     // http://julian.com/research/velocity/#easing
@@ -235,5 +237,16 @@ $('.tabs').tabtab({
 	skewX: 0,                           // animate X skew (val: 0deg-360deg)
 });
 
+// easter egg
+
+$('.i-truck-car').click(function(event) {
+	var x = $('.i-truck-car').css('margin-top');
+	x = x.substr(0, x.length - 2);
+	x = parseInt(x);
+	setInterval(function() {
+		x = x - 1;
+		$('.i-truck-car').css('margin-top', (x + "px"));
+	}, 5);
+});
 
 });

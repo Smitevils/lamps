@@ -18,7 +18,7 @@ body {
 a {color: $font-color-1; text-decoration: none;}
 a:hover {text-decoration: underline;}
 
-* {outline: 1px dashed yellowgreen};
+//* {outline: 1px dashed yellowgreen};
 
 .slick-slide {
 	outline: none;
@@ -48,27 +48,31 @@ a:hover {text-decoration: underline;}
 		width: 50%;
 	}
 	.division-3 {
-		display: inline-block; font-size: 14px;
+		display: inline-block; font-size: 14px; vertical-align: top;
 		width: 33.33333333%;
 	}
 	.division-4 {
-		display: inline-block; font-size: 14px;
+		display: inline-block; font-size: 14px; vertical-align: top;
 		width: 25%;
 	}
+	.division-10per {
+		display: inline-block; font-size: 14px; vertical-align: text-bottom;
+		width: 10%;
+	}
 	.division-20per {
-		display: inline-block; font-size: 14px;
+		display: inline-block; font-size: 14px; vertical-align: top;
 		width: 20%;
 	}
 	.division-30per {
-		display: inline-block; font-size: 14px;
+		display: inline-block; font-size: 14px; vertical-align: top;
 		width: 30%;
 	}
 	.division-40per {
-		display: inline-block; font-size: 14px;
+		display: inline-block; font-size: 14px; vertical-align: top;
 		width: 40%;
 	}
 	.division-60per {
-		display: inline-block; font-size: 14px;
+		display: inline-block; font-size: 14px; vertical-align: top;
 		width: 60%;
 	}
 	.division-80per {
@@ -209,6 +213,8 @@ a:hover {text-decoration: underline;}
 header {
 	background-color: $bg-color-1;
 	@include ProximaNova;
+	width: 100%;
+	z-index: 9999;
 }
 
 .header-content {
@@ -500,6 +506,17 @@ header {
 .i-category {
 	width: 34px; height: 34px;
 	fill: $bg-color-9;
+}
+.i-info {
+	width: 34px; height: 34px;
+	fill: $bg-color-3;
+}
+.i-truck-car {
+	width: 72px; height: 72px;
+	display: inline-block;
+	fill: $bg-color-3;
+	transform: rotate(-90deg);
+	position: absolute; margin-top: 10px;
 }
 
 /* upper count */
@@ -1262,14 +1279,103 @@ input {outline: none;}
 // three-tabs
 
 .animate-tabs {
-	
+	.tabs__menu {
+		padding: 0; margin: 0;
+		list-style: none;
+		font-size: 0;
+		width: 100%;
+		margin-bottom: -1px;
+		//
+		.tabs__menu-item {
+			display: inline-block;
+			vertical-align: top;
+			font-size: 20px;
+			//
+			a {
+				display: inline-block;
+				box-sizing: border-box;
+				width: 100%;
+				padding: 20px 0px 20px 60px;
+				text-decoration: none;
+				font-size: 14px;
+				font-weight: 600;
+				text-transform: uppercase;
+				color: $font-color-6;
+				border-bottom: 1px solid $font-color-6;
+			}
+			&:hover a {
+				border-bottom: 1px solid $font-color-1;
+				color: $font-color-1;
+			}
+			&.active a {
+				border-bottom: 1px solid $font-color-1;
+				color: $font-color-1;
+			}
+		}
+		.tabs__menu-item__division-3 {
+			width: 33.33333333%;
+		}
+	}
+	.tabs__content {
+		padding: 50px 0;
+		vertical-align: top;
+	}
 }
 
 .tabs-wrap {
 	width: 100%;
-	min-height: 100px;
-	background: red;
+	//min-height: 100px;
 	position: relative;
+}
+
+.tabs__menu__wrap {
+	width: 100%;
+	border-bottom: 1px solid $font-color-6;
+}
+
+//
+
+.list-header {
+	font-size: 14px;
+	font-weight: 600;
+	margin: 30px 0;
+}
+
+.ol-list {
+	list-style: none;
+	padding-left: 60px;
 	//
+	span {
+		font-weight: 600;
+	}
+}
+
+.info-block {
+	background: $bg-color-1;
+	padding: 26px 38px 26px 38px;
+	max-width: 300px;
+	box-sizing: border-box;
+	margin: 0 auto;
+	//
+	span {
+		font-weight: 600;
+	}
+}
+
+.title-mark {
+	transform: rotate(90deg);
+	position: relative; margin-left: 12px;
+	//
+	span {
+		display: inline-block;
+		margin: 0; padding: 0;
+		font-weight: 600;
+		font-size: 72px;
+		color: $font-color-6;
+		text-transform: uppercase;
+		letter-spacing: 10px; 
+		padding-left: 90px;
+		//transform: rotate(90deg);
+	}
 }
 
