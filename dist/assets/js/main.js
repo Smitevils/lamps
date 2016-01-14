@@ -19,7 +19,7 @@ $(".fancybox").fancybox();
 
 // Кнопка каталога в меню
 $('.inner-menu a').click(function(event) {
-	event.preventDefault();
+	//event.preventDefault();
 	$(this).parent().toggleClass('open');
 });
 //
@@ -209,13 +209,14 @@ $('.btn__main-filter-search').on('click', function(event) {
 });
 
 /* tabtab.js */
+var active_tab = $('.animate-tabs .tabs').data('active-tab'); // search active tab
 $('.animate-tabs .tabs').tabtab({
 	tabMenu: '.tabs__menu',             // direct container of the tab menu items
 	tabContent: '.tabs__content',       // direct container of the tab content items
 	//next: '.tabs-controls__next',       // next slide trigger
 	//prev: '.tabs-controls__prev',       // previous slide trigger
 
-	startSlide: 3,                      // starting slide on pageload
+	startSlide: active_tab,                      // starting slide on pageload
 	arrows: true,                       // keyboard arrow navigation
 	dynamicHeight: true,                // if true the height will dynamic and animated.
 	fixedHeight: false,                 // fixedHeight
@@ -225,14 +226,14 @@ $('.animate-tabs .tabs').tabtab({
 	speed: 350,                         // animation speed
 	slideDelay: 0,                      // delay the animation
 	perspective: 1200,                  // set 3D perspective
-	transformOrigin: 'center bottom',      // set the center point of the 3d animation
+	transformOrigin: 'center left',      // set the center point of the 3d animation
 	perspectiveOrigin: '50% 50%',       // camera angle
 
 	translateY: 0,                      // animate along the Y axis (val: px or ‘slide’)
 	translateX: 0,                      // animate along the X axis (val: px or ‘slide’)
 	scale: 1,                           // animate scale (val: 0-2)
-	rotateX: 90,                        // animate rotation (val: 0deg-360deg)
-	rotateY: 0,                         // animate Y acces rotation (val: 0deg-360deg)
+	rotateX: 0,                        // animate rotation (val: 0deg-360deg)
+	rotateY: 10,                         // animate Y acces rotation (val: 0deg-360deg)
 	skewY: 0,                           // animate Y skew (val: 0deg-360deg)
 	skewX: 0,                           // animate X skew (val: 0deg-360deg)
 });
