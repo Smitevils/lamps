@@ -215,7 +215,7 @@ $('.animate-tabs .tabs').tabtab({
 	//next: '.tabs-controls__next',       // next slide trigger
 	//prev: '.tabs-controls__prev',       // previous slide trigger
 
-	startSlide: 1,                      // starting slide on pageload
+	startSlide: 3,                      // starting slide on pageload
 	arrows: true,                       // keyboard arrow navigation
 	dynamicHeight: true,                // if true the height will dynamic and animated.
 	fixedHeight: false,                 // fixedHeight
@@ -225,7 +225,7 @@ $('.animate-tabs .tabs').tabtab({
 	speed: 350,                         // animation speed
 	slideDelay: 0,                      // delay the animation
 	perspective: 1200,                  // set 3D perspective
-	transformOrigin: 'center top',      // set the center point of the 3d animation
+	transformOrigin: 'center bottom',      // set the center point of the 3d animation
 	perspectiveOrigin: '50% 50%',       // camera angle
 
 	translateY: 0,                      // animate along the Y axis (val: px or ‘slide’)
@@ -239,7 +239,7 @@ $('.animate-tabs .tabs').tabtab({
 
 // easter egg
 
-$('.i-truck-car').click(function(event) {
+/*$('.i-truck-car').click(function(event) {
 	var x = $('.i-truck-car').css('margin-top');
 	x = x.substr(0, x.length - 2);
 	x = parseInt(x);
@@ -247,6 +247,6 @@ $('.i-truck-car').click(function(event) {
 		x = x - 1;
 		$('.i-truck-car').css('margin-top', (x + "px"));
 	}, 5);
-});
+});*/
 
 });

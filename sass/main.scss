@@ -15,6 +15,13 @@ body {
 	//overflow-x: hidden;
 }
 
+p {
+	//
+	span {
+		font-weight: 600;
+	}
+}
+
 a {color: $font-color-1; text-decoration: none;}
 a:hover {text-decoration: underline;}
 
@@ -76,8 +83,12 @@ a:hover {text-decoration: underline;}
 		width: 60%;
 	}
 	.division-80per {
-		display: inline-block; font-size: 14px;
+		display: inline-block; font-size: 14px; vertical-align: top;
 		width: 80%;
+	}
+	.division-90per {
+		display: inline-block; font-size: 14px; vertical-align: top;
+		width: 90%;
 	}
 }
 
@@ -517,6 +528,19 @@ header {
 	fill: $bg-color-3;
 	transform: rotate(-90deg);
 	position: absolute; margin-top: 10px;
+}
+.i-credit-card {
+	width: 72px; height: 72px;
+	display: inline-block;
+	fill: $bg-color-3;
+	transform: rotate(-90deg);
+	position: absolute; margin-top: 10px;
+}
+
+.i-guarantees {
+	width: 50px; height: 50px;
+	display: inline-block;
+	fill: $bg-color-3;
 }
 
 /* upper count */
@@ -1319,6 +1343,8 @@ input {outline: none;}
 	.tabs__content {
 		padding: 50px 0;
 		vertical-align: top;
+		//
+		.tabs__content-item {width: 100%; min-height: 600px;}
 	}
 }
 
@@ -1378,4 +1404,62 @@ input {outline: none;}
 		//transform: rotate(90deg);
 	}
 }
+
+// payment
+
+.payment-step {
+	@include Display-Flex-Center-Top;
+	padding: 20px 0;
+}
+
+.payment-step__content {
+	max-width: 220px;
+}
+
+.payment-step__content__number {
+	display: inline-block; vertical-align: bottom;
+	font-size: 72px;
+	color: $font-color-6; line-height: 62px; font-weight: 600;
+}
+.payment-step__content__icon {
+	display: inline-block;
+	width: 44px; height: 44px;
+	fill: $bg-color-3; vertical-align: bottom;
+	margin-left: 10px;
+}
+.payment-step__content__title {
+	color: $font-color-1;
+	font-weight: 600;
+	font-size: 14px;
+}
+
+// guarantees
+
+.guarantees-list {
+
+}
+
+.guarantees-list__item {
+	//padding: 20px 0;
+}
+
+.guarantees-list__icon {
+	text-align: center;
+	padding: 20px 0;
+}
+
+.guarantees-list__text {
+	padding: 20px 0;
+	//
+	p {
+		/*margin: 0;*/ padding: 0; font-weight: 200;
+	}
+	p:first-child {margin-top: 0;}
+}
+
+.guarantees-list__text_info {
+	font-style: italic;
+	border-top: 1px solid $font-color-6;
+}
+
 
