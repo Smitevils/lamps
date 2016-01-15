@@ -7,6 +7,11 @@ var rigger = require('gulp-rigger');
 var autoprefixer = require('gulp-autoprefixer');
 var cssmin = require('gulp-cssmin');
 var rename = require('gulp-rename');
+
+var px2rem = require('gulp-px2rem');
+var px2remOptions = {replace: false};
+var postCssOptions = {map: true};
+
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 
@@ -27,6 +32,12 @@ var path = {
     style: './sass/**/*.scss'
   }
 };
+
+gulp.task('rem', function() {
+    gulp.src('./dist/assets/css/**/*.css')
+        .pipe(px2rem(px2remOptions, postCssOptions))
+        .pipe(gulp.dest('css'));
+});
 
 // Browser Sync
 var config = {

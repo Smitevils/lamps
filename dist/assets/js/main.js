@@ -250,4 +250,19 @@ $('.animate-tabs .tabs').tabtab({
 	}, 5);
 });*/
 
+// blog slider
+
+$('#blog__slider').slick({
+	vertical: false,
+	infinite: true,
+	arrows: false,
+	swipe: true,
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	adaptiveHeight: false,
+	speed: 400/*,
+	prevArrow: $('.slick-prev'),
+	nextArrow: $('.slick-next')*/
+});
+
 });
