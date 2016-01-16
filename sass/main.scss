@@ -25,7 +25,7 @@ p {
 a {color: $font-color-1; text-decoration: none;}
 a:hover {text-decoration: underline; text-decoration: none;}
 
-* {outline: 1px dashed yellowgreen};
+//* {outline: 1px dashed yellowgreen};
 
 .slick-slide {
 	outline: none;
@@ -221,6 +221,19 @@ a:hover {text-decoration: underline; text-decoration: none;}
 	//
 	&:hover {
 		background-color: $font-color-1;
+		color: $font-color-2;
+	}
+}
+
+.btn__green-2-green {
+	border: 1px $bg-color-8 solid;
+	color: $font-color-2;
+	background: $bg-color-8;
+	text-transform: uppercase; font-size: 12px; font-weight: 600;
+	padding: 10px 36px;
+	//
+	&:hover {
+		background-color: $bg-color-8-hover;
 		color: $font-color-2;
 	}
 }
@@ -612,6 +625,25 @@ header {
 .i-category-list {
 	width: 70px; height: 70px;
 	fill: $bg-color-11;
+}
+
+.i-circle-chrest {
+	width: 20px; height: 20px;
+	fill: transparent; @include Transition-All-03s;
+	stroke: $font-color-1; opacity: 0.4;
+	//
+	&:hover {
+		opacity: 1;
+	}
+}
+.i-counter {
+	width: 20px; height: 20px;
+	fill: transparent; @include Transition-All-03s;
+	stroke: $font-color-1; opacity: 0.4;
+	//
+	&:hover {
+		opacity: 1;
+	}
 }
 
 /* upper count */
@@ -1038,7 +1070,7 @@ input {outline: none;}
 /* breadcrumbs */
 
 .breadcrumbs {
-	display: inline-block; font-size: 0; padding-left: 10px; list-style: none;
+	display: inline-block; font-size: 0; padding-left: 10px; list-style: none; text-transform: uppercase;
 	//
 	li {
 		display: inline-block;
@@ -1056,6 +1088,10 @@ input {outline: none;}
 			color: $font-color-1;
 		}
 	}
+}
+
+.breadcrumbs_wrap {
+	text-align: center;
 }
 
 /* Блоки 3-х главных категорий на главной и выпадающее меню */
@@ -1846,3 +1882,113 @@ input {outline: none;}
 	}
 }
 
+/* basket */
+
+.basket__container {
+
+}
+
+.basket__table {
+	margin-top: 40px;
+}
+.basket__table__row {
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+}
+.basket__table__header {
+	background: $bg-color-1;
+	padding: 14px 30px;
+	font-size: 12px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+.basket__table__footer {
+	background: $bg-color-1;
+	padding: 14px 30px;
+	font-size: 12px;
+	font-weight: 600;
+	text-transform: uppercase;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	font-size: 24px; font-weight: 600;
+	//
+	p {margin: 0;}
+}
+.basket__table__item {
+	border-bottom: 1px solid $bg-color-1;
+	padding: 14px 30px;
+}
+.basket__table__cell {
+	display: flex;
+	//
+	img {width: 70px; height: 70px;}
+}
+.basket__table__cell__1 {
+	width: 10%;
+	justify-content: center; align-items: center;
+}
+.basket__table__cell__2 {
+	width: 35%;
+	justify-content: flex-start; align-items: center;
+	//
+	.basket__table__info {}
+	.basket__table__name {width: 100%; font-weight: 200;}
+	.basket__table__article {
+		width: 100%; font-style: 12px;
+		font-style: italic; font-weight: 200;
+		//
+		span {font-weight: 200;}
+	}
+}
+.basket__table__cell__3 {
+	width: 15%;
+	justify-content: flex-start; align-items: center;
+	//
+	.basket__table__price {
+		font-weight: 200; font-size: 24px;
+	}
+}
+.basket__table__cell__4 {
+	width: 20%;
+	justify-content: center; align-items: center;
+}
+.basket__table__cell__5 {
+	width: 15%;
+	justify-content: flex-start; align-items: center;
+	//
+	.basket__table__price-end {
+		font-weight: 200; font-size: 24px;
+	}
+}
+.basket__table__cell__6 {
+	width: 5%;
+	justify-content: center; align-items: center;
+}
+
+.basket__table__buttons {
+	display: block!important;
+	text-align: right;
+	padding: 30px 0;
+	//
+	.btn__green-2-green {
+		margin-left: 30px;
+	}
+}
+
+.item-counter {
+	display: inline-block; padding: 0; margin: 0; list-style: none; font-size: 0;
+	//
+	li {
+		display: inline-block; font-size: 14px; margin: 5px; vertical-align: middle;
+	}
+	.item-counter-input {
+		text-align: center;
+		background: transparent;
+		border: none;
+		width: 50px;
+		font-weight: 800;
+		font-size: 14px;
+	}
+}

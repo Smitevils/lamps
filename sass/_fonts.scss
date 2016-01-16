@@ -70,6 +70,18 @@
 	font-weight: 800;
 }
 
+/* font-family: "ProximaNova Light Italic"; */
+@font-face {
+	font-family: "ProximaNova";
+	src: url("../fonts/ProximaNova/ProximaNovaLightItalic/ProximaNova-LightIt.eot");
+	src: url("../fonts/ProximaNova/ProximaNovaLightItalic/ProximaNova-LightIt.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/ProximaNova/ProximaNovaLightItalic/ProximaNova-LightIt.woff") format("woff"),
+	url('../fonts/ProximaNova/ProximaNovaLightItalic/ProximaNova-LightIt.woff2') format('woff2'), 
+	url("../fonts/ProximaNova/ProximaNovaLightItalic/ProximaNova-LightIt.ttf") format("truetype");
+	font-style: italic;
+	font-weight: 200;
+}
+
 /* font-family: "Lamp Custom Font - icomoon"; */
 @font-face {
     font-family: 'icomoon';
