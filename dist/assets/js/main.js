@@ -255,7 +255,7 @@ $('.animate-tabs .tabs').tabtab({
 $('#blog__slider').slick({
 	vertical: false,
 	infinite: true,
-	arrows: false,
+	arrows: true,
 	swipe: true,
 	slidesToShow: 1,
 	slidesToScroll: 1,
