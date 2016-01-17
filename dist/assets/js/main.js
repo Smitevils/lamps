@@ -265,4 +265,74 @@ $('#blog__slider').slick({
 	nextArrow: $('.slick-next')*/
 });
 
+/* basket */
+
+function basketItemCount(operator, value, object) {
+	if (operator == "minus") {
+		if (value > 1) {
+			value--;
+			object.val(value);
+			object.attr('value', value);
+		} else {
+			return;
+		}
+	} else if (operator == "plus") {
+		if (value < 100) {
+			value++;
+			object.val(value);
+			object.attr('value', value);
+		} else {
+			return;
+		}
+	}
+}
+$('.item-minus').click(function(event) {
+	event.preventDefault();
+	var value = $(this).parents('.item-counter').find('.item-counter-input').val(); value = parseInt(value);
+	var object = $(this).parents('.item-counter').find('.item-counter-input');
+	var operator = "minus";
+	basketItemCount(operator, value, object);
+	//
+	value = $(this).parents('.item-counter').find('.item-counter-input').val(); value = parseInt(value);
+	checkPriceItem(object, value);
+	checkEndPrice(object, value);
+});
+$('.item-plus').click(function(event) {
+	event.preventDefault();
+	var value = $(this).parents('.item-counter').find('.item-counter-input').val(); value = parseInt(value);
+	var object = $(this).parents('.item-counter').find('.item-counter-input');
+	var operator = "plus";
+	basketItemCount(operator, value, object);
+	//
+	value = $(this).parents('.item-counter').find('.item-counter-input').val(); value = parseInt(value);
+	checkPriceItem(object, value);
+	checkEndPrice(object, value);
+});
+function checkPriceItem(object, value) {
+	var end_price = 0;
+	var price = parseInt(object.parents('.basket__table__item').find('.basket__table__price').html());
+	end_price = price * value;
+	object.parents('.basket__table__item').find('.basket__table__price-end').html(end_price)
+}
+function checkEndPrice() {
+	var total_price = 0;
+	$(".basket__table__price-end").each(function(indx, element){
+		total_price = total_price + (parseInt($(this).html()));
+	});
+	$('.total-price').html(total_price);
+}
+
+$('.delite-item').click(function(event) {
+	event.preventDefault();
+	var item = $(this).parents('.basket__table__item');
+	item.slideUp(400);
+	setTimeout(function() {
+		item.remove();
+		checkEndPrice();
+	}, 400);
+	
+});
+checkEndPrice();
+
+
 });

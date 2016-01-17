@@ -25,7 +25,7 @@ p {
 a {color: $font-color-1; text-decoration: none;}
 a:hover {text-decoration: underline; text-decoration: none;}
 
-//* {outline: 1px dashed yellowgreen};
+* {outline: 1px dashed yellowgreen};
 
 .slick-slide {
 	outline: none;
@@ -1948,6 +1948,8 @@ input {outline: none;}
 	//
 	.basket__table__price {
 		font-weight: 200; font-size: 24px;
+		//
+		& + span {font-weight: 200; font-size: 24px;}
 	}
 }
 .basket__table__cell__4 {
@@ -1960,6 +1962,8 @@ input {outline: none;}
 	//
 	.basket__table__price-end {
 		font-weight: 200; font-size: 24px;
+		//
+		& + span {font-weight: 200; font-size: 24px;}
 	}
 }
 .basket__table__cell__6 {
@@ -1991,4 +1995,10 @@ input {outline: none;}
 		font-weight: 800;
 		font-size: 14px;
 	}
+}
+
+/* ordering */
+
+.ordering {
+	
 }
