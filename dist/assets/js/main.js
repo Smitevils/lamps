@@ -334,5 +334,65 @@ $('.delite-item').click(function(event) {
 });
 checkEndPrice();
 
+//
+
+// Вкладки формы заказов
+function checkFormTabs() {
+	if ($('#buyer-method-1').is("checked")) {
+		$('.legal-delivery').hide();
+		$('.individual-delivery').show();
+	} else if ($('#buyer-method-2').is("checked")) {
+		$('.individual-delivery').hide();
+		$('.legal-delivery').show();
+	}
+}
+checkFormTabs();
+$('.buyer-individual').click(function(event) {
+	//checkFormTabs();
+	$('.legal-delivery').hide();
+	$('.individual-delivery').show();
+});
+$('.buyer-legal').click(function(event) {
+	// checkFormTabs();
+	$('.individual-delivery').hide();
+	$('.legal-delivery').show();
+});
+
+function displayFirstSelectedFileMetadata() {
+	var selectedFile = document.getElementById('ordering__content__upload-file').files[0];
+	document.querySelector(".name-of-file").innerHTML = selectedFile.name;
+	/*document.querySelector("#singleSize").innerHTML = selectedFile.size + " bytes";
+	document.querySelector("#singleType").innerHTML = selectedFile.type;
+	document.querySelector("#singleDate").innerHTML = selectedFile.lastModifiedDate;*/
+}
+$('#ordering__content__upload-file').change(function(event) {
+	displayFirstSelectedFileMetadata();
+});
+
+/* если выбран чекбокс загрузить реквизиты */
+$('#load-file-checkbox').click(function(event) {
+	//alert()
+	if ($('#load-file-checkbox').is(':checked')) {
+		$('.ordering__content__upload-file, .name-of-file').show();
+		$('.hide-fields-for-legal').hide();
+	} else {
+		$('.ordering__content__upload-file, .name-of-file').hide();
+		$('.hide-fields-for-legal').show();
+	}
+});
+
+/* загружаем файл на странице рассчитать проект */
+function uploadFileGetProject() {
+	var selectedFile = document.getElementById('get-project__upload-file').files[0];
+	document.querySelector(".name-of-file").innerHTML = selectedFile.name + " " + selectedFile.size + " bytes";
+	/*document.querySelector("#singleSize").innerHTML = selectedFile.size + " bytes";
+	document.querySelector("#singleType").innerHTML = selectedFile.type;
+	document.querySelector("#singleDate").innerHTML = selectedFile.lastModifiedDate;*/
+}
+$('#get-project__upload-file').change(function(event) {
+	uploadFileGetProject();
+});
+
+
 
 });
