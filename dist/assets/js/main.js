@@ -393,6 +393,62 @@ $('#get-project__upload-file').change(function(event) {
 	uploadFileGetProject();
 });
 
+/* карты */
 
+if($('#map').length > 0){
+
+            function init() {
+                // Basic options for a simple Google Map
+                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+                var mapOptions = {
+                    // How zoomed in you want the map to start at (always required)
+                    zoom: 17,
+                    scrollwheel: false,
+                    navigationControl: false,
+		            mapTypeControl: false,
+		            scaleControl: false,
+		            disableDefaultUI: true,
+            		draggable: true,
+                    // The latitude and longitude to center the map (always required)
+                    center: new google.maps.LatLng(document.getElementById('map').dataset.centerx, document.getElementById('map').dataset.centery), 
+
+                    // How you would like to style the map. 
+                    // This is where you would paste any style found on Snazzy Maps.
+                    styles:[
+							  {
+							    "stylers": [
+							      { "hue": "#e6ff00" },
+							      { "saturation": -100 },
+							      { "gamma": 1.69 },
+							      { "lightness": 10 }
+							    ]
+							  }
+							]
+                    };
+
+                // Get the HTML DOM element that will contain your map 
+                // We are using a div with id="map" seen below in the <body>
+                var mapElement = document.getElementById('map');     
+
+                // Create the Google Map using our element and options defined above
+
+
+
+                // Let's also add a marker while we're at it
+                var image = document.getElementById('map').dataset.cursor;
+                var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(document.getElementById('map').dataset.centerx, document.getElementById('map').dataset.centery),
+                    map: map,
+                    title: document.getElementById('map').dataset.title,
+                    icon: image,
+                    animation: google.maps.Animation.BOUNCE
+                });
+
+            var map = new google.maps.Map(mapElement, mapOptions);
+
+            marker.setMap(map);
+            }
+        google.maps.event.addDomListener(window, 'load', init);
+}
 
 });
