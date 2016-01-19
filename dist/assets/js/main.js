@@ -407,7 +407,7 @@ if($('#map').length > 0){
                     navigationControl: false,
 		            mapTypeControl: false,
 		            scaleControl: false,
-		            disableDefaultUI: true,
+		            disableDefaultUI: false,
             		draggable: true,
                     // The latitude and longitude to center the map (always required)
                     center: new google.maps.LatLng(document.getElementById('map').dataset.centerx, document.getElementById('map').dataset.centery), 
