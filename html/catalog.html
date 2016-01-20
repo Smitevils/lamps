@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	//= head.html
+</head>
+<body>
+	//= svg-sprites.html
+	//= search.html
+	//= header.html
+	//= subheader.html
+	<main>
+		<div class="page-container catalog">
+			<!-- filter -->
+			//= filter.html
+			<!-- /filter -->
+			<div class="catalog__content">
+				<!-- catalog sort -->
+				<aside class="catalog-sort">
+					<form action="#" method="post">
+						<div class="catalog-sort__content">
+							<p>Сортировать по</p>
+							<select name="sort-1">
+								<option value="1">Цене</option>
+								<option value="2">Бренду</option>
+								<option value="2">Цвету</option>
+							</select>
+							<p>Выводить на странице</p>
+							<select name="sort-2">
+								<option value="1">по 20 позиций</option>
+								<option value="2">по 40 позиций</option>
+								<option value="2">по 80 позиций</option>
+								<option value="2">по 100 позиций</option>
+							</select>
+						</div>
+					</form>
+					<div class="catalog-sort__content">
+						<p>Категории</p>
+						<ul>
+							<li>
+								<input type="checkbox" name="catalog-sort-checkbox-1" id="catalog-sort-checkbox-1">
+								<label for="catalog-sort-checkbox-1">В стиле лофт</label>
+							</li>
+							<li>
+								<input type="checkbox" name="load-file-checkbox" id="catalog-sort-checkbox-2">
+								<label for="catalog-sort-checkbox-2">Лаконичные</label>
+							</li>
+							<li>
+								<input type="checkbox" name="load-file-checkbox" id="catalog-sort-checkbox-3">
+								<label for="catalog-sort-checkbox-3">Из металла</label>
+							</li>
+							<li>
+								<input type="checkbox" name="load-file-checkbox" id="catalog-sort-checkbox-4">
+								<label for="catalog-sort-checkbox-4">Лакончные</label>
+							</li>
+							<li>
+								<input type="checkbox" name="load-file-checkbox" id="catalog-sort-checkbox-5">
+								<label for="catalog-sort-checkbox-5">Из металла</label>
+							</li>
+							<li>
+								<input type="checkbox" name="load-file-checkbox" id="catalog-sort-checkbox-6">
+								<label for="catalog-sort-checkbox-6">Люстры-свечи</label>
+							</li>
+							<li>
+								<input type="checkbox" name="load-file-checkbox" id="catalog-sort-checkbox-7">
+								<label for="catalog-sort-checkbox-7">Многоярусные</label>
+							</li>
+							<li>
+								<input type="checkbox" name="load-file-checkbox" id="catalog-sort-checkbox-8">
+								<label for="catalog-sort-checkbox-8">Из дерева</label>
+							</li>
+							<li>
+								<input type="checkbox" name="load-file-checkbox" id="catalog-sort-checkbox-9">
+								<label for="catalog-sort-checkbox-9">Кованые</label>
+							</li>
+						</ul>
+					</div>
+				</aside>
+				<!-- /catalog sort -->
+				<div class="catalog__cards-list">
+					<div class="catalog__goods-cards">
+						<div class="grid-row">
+							<div class="division-4">
+								//= include-card.html
+							</div>
+							<div class="division-4">
+								//= include-card.html
+							</div>
+							<div class="division-4">
+								//= include-card.html
+							</div>
+							<div class="division-4">
+								//= include-card.html
+							</div>
+							<div class="division-4">
+								//= include-card.html
+							</div>
+							<div class="division-4">
+								//= include-card.html
+							</div>
+							<div class="division-4">
+								//= include-card.html
+							</div>
+							<div class="division-4">
+								//= include-card.html
+							</div>
+						</div>
+					</div>
+					<div class="catalog__cards-list__footer">
+						<div class="grid-row">
+							<div class="division-2">
+								<p>Показано <span>1 - 96</span> из <span>2798</span></p>
+							</div>
+							<div class="division-2">
+								<nav class="page-navigation">
+									<ol class="bones_page_navi clearfix">
+										<li class="bpn-prev-link"><a href="http://loftblog.ru/category/videouroki/"> </a></li>
+										<li><a href="http://loftblog.ru/category/videouroki/">1</a></li>
+										<li class="bpn-current">
+											<a href="#">2</a>
+										</li>
+										<li><a href="http://loftblog.ru/category/videouroki/page/3/">3</a></li>
+										<li><a href="http://loftblog.ru/category/videouroki/page/4/">4</a></li>
+										<li>...</li>
+										<li><a href="http://loftblog.ru/category/videouroki/page/20/">20</a></li>
+										<li><a href="http://loftblog.ru/category/videouroki/page/21/">21</a></li>
+										<li class="bpn-next-link"><a href="http://loftblog.ru/category/videouroki/page/3/"> </a></li>
+									</ol>
+								</nav>
+							</div>
+						</div>
+					</div>
+					<div class="recently-viewed">
+						<div class="recently-viewed__title">
+							<h3>ВЫ НЕДАВНО ПРОСМАТРИВАЛИ</h3>
+						</div>
+						<div class="catalog__goods-cards">
+							<!-- ..dsdjlbv 4-t -->
+							<div class="grid-row">
+								<div class="division-4">
+									//= include-card.html
+								</div>
+								<div class="division-4">
+									//= include-card.html
+								</div>
+								<div class="division-4">
+									//= include-card.html
+								</div>
+								<div class="division-4">
+									//= include-card.html
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	//= footer.html
+	//= popups.html
+	<!-- Scripts -->
+	//= scripts.html
+</body>
+</html>

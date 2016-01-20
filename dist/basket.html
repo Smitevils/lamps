@@ -32,639 +32,12 @@
 	<link rel="stylesheet" type="text/css" href="assets/modules/slick/slick.css"/>
 	<!-- Custom ScrollBar -->
 	<link rel="stylesheet" href="assets/modules/malihu-custom-scrollbar/jquery.mCustomScrollbar.min.css" />
+	<!-- NoUiSlider -->
+	<link rel="stylesheet" href="assets/modules/nouislider/nouislider.min.css" />
+	<!-- selectize -->
+	<link rel="stylesheet" href="assets/modules/fancyselect/fancySelect.css" />
 </head>
 <body>
-	<div class="search-window">
-		<div class="search-window__close-wrap"></div>
-		<div class="search-window__content">
-			<form action="" method="">
-				<input type="text" id="search"><label for="search">Введите ключевое слово...</label>
-			</form>
-		</div>
-	</div>
-	<header>
-		<div class="page-container header-content clearfix">
-			<nav class="navigation">
-				<ul>
-					<li class="inner-menu">
-						<a href="#">
-							<span class="first-nav-btn">каталог</span>
-						</a>
-						<!-- Inner Menu First Level -->
-						<ul>
-							<li>
-								<a href="categories.html">
-									<span>basic</span>
-								</a>
-								<div class="nav-popup-content">
-									<div class="nav-popup-content__block">
-										<a href="#">Подвесные люстры</a>
-									</div>
-									<div class="nav-popup-content__block">
-										<a href="#">Споты</a>
-									</div>
-									<div class="nav-popup-content__block">
-										<a href="#">Торшеры</a>
-									</div>
-									<div class="nav-popup-content__block">
-										<a href="#">Подвесные светильники</a>
-									</div>
-								</div>
-							</li>
-							<li>
-								<a href="categories.html">
-									<span>premium</span>
-								</a>
-								<div class="nav-popup-content">
-									<div class="nav-popup-content__block">
-										<a href="categories.html">Подвесные люстры</a>
-									</div>
-									<div class="nav-popup-content__block">
-										<a href="index.html">Споты</a>
-									</div>
-									<div class="nav-popup-content__block">
-										<a href="#">Торшеры</a>
-									</div>
-									<div class="nav-popup-content__block">
-										<a href="#">Подвесные светильники</a>
-									</div>
-								</div>
-							</li>
-							<li>
-								<a href="categories.html">
-									<span>professional</span>
-								</a>
-								<div class="nav-popup-content">
-									<div class="nav-popup-content__block">
-										<a href="#">Подвесные люстры</a>
-									</div>
-									<div class="nav-popup-content__block">
-										<a href="#">Споты</a>
-									</div>
-									<div class="nav-popup-content__block">
-										<a href="#">Торшеры</a>
-									</div>
-									<div class="nav-popup-content__block">
-										<a href="#">Подвесные светильники</a>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="get-project.html">
-							<div class="nav-text-wrap">
-								<span data-hover="рассчитать проект">рассчитать проект</span>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="delivery.html">
-							<div class="nav-text-wrap">
-								<span data-hover="доставка и оплата">доставка и оплата</span>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<div class="nav-text-wrap">
-								<span data-hover="установка">установка</span>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="blog.html">
-							<div class="nav-text-wrap">
-								<span data-hover="блог">блог</span>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="about-company.html">
-							<div class="nav-text-wrap">
-								<span data-hover="о компании">о компании</span>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="contacts.html">
-							<div class="nav-text-wrap">
-								<span data-hover="контакты">контакты</span>
-							</div>
-						</a>
-					</li>
-				</ul>
-			</nav>
-			<!-- user nav -->
-			<div class="user-nav">
-				<ul class="user-nav-list">
-					<li>
-						<a href="#">
-							<i class="icon i-basket">
-								<svg viewBox="0 0 409.165 409.164">
-									<use xlink:href="#user-svg"></use>
-								</svg>
-							</i>
-							<span>вход</span>
-						</a>
-					</li>
-					<li>
-						<a href="basket.html" class="go-to-cart">
-							<i class="icon i-basket">
-								<svg viewBox="0 0 348.047 348.047">
-									<use xlink:href="#basket-svg"></use>
-								</svg>
-								<span class="count-of-goods">1</span>
-							</i>
-							<span>корзина</span>
-						</a>
-					</li>
-				</ul>
-				<div class="search-btn"></div>
-				<!-- basket popup -->
-				<div class="basket-main-popup">
-					<!-- slider -->
-					<div class="slick-arrow-btn slick-prev"></div>
-					<div id="basket-popup-slider" class="basket-main-popup__slider">
-						<div class="basket-main-popup__slide">
-							<!-- cell -->
-							<div class="basket-main-popup__product-cell">
-								<ul>
-									<li>
-										<div class="basket-main-popup__product-cell__img">
-											<img src="https://image.freepik.com/free-icon/video-camera_318-49881.png" alt="product">
-										</div>
-									</li>
-									<li>
-										<p class="basket-main-popup__product-cell__text name">
-											<a href="#">Jade S82938-3</a>
-										</p>
-										<p class="basket-main-popup__product-cell__text type">
-											торшер
-										</p>
-										<p class="basket-main-popup__product-cell__text price">
-											цена <span>4900 P</span>
-										</p>
-									</li>
-									<li>
-										<p class="basket-main-popup__product-cell__text quantity">
-											<span>1</span> шт.
-										</p>
-										<a href="#" class="basket-popup-close-btn"></a>
-									</li>
-								</ul>
-							</div>
-							<!-- /cell -->
-						</div>
-						<div class="basket-main-popup__slide">
-							<!-- cell -->
-							<div class="basket-main-popup__product-cell">
-								<ul>
-									<li>
-										<div class="basket-main-popup__product-cell__img">
-											<img src="https://yt3.ggpht.com/-O2pWB5rnPtU/AAAAAAAAAAI/AAAAAAAAAAA/ogPef_qsJ94/s900-c-k-no/photo.jpg" alt="product">
-										</div>
-									</li>
-									<li>
-										<p class="basket-main-popup__product-cell__text name">
-											<a href="#">Jade S82938-3</a>
-										</p>
-										<p class="basket-main-popup__product-cell__text type">
-											торшер
-										</p>
-										<p class="basket-main-popup__product-cell__text price">
-											цена <span>4900 P</span>
-										</p>
-									</li>
-									<li>
-										<p class="basket-main-popup__product-cell__text quantity">
-											<span>2</span> шт.
-										</p>
-										<a href="#" class="basket-popup-close-btn"></a>
-									</li>
-								</ul>
-							</div>
-							<!-- /cell -->
-						</div>
-						<div class="basket-main-popup__slide">
-							<!-- cell -->
-							<div class="basket-main-popup__product-cell">
-								<ul>
-									<li>
-										<div class="basket-main-popup__product-cell__img">
-											<img src="https://image.freepik.com/free-icon/video-camera_318-49881.png" alt="product">
-										</div>
-									</li>
-									<li>
-										<p class="basket-main-popup__product-cell__text name">
-											<a href="#">Jade S82938-3</a>
-										</p>
-										<p class="basket-main-popup__product-cell__text type">
-											торшер
-										</p>
-										<p class="basket-main-popup__product-cell__text price">
-											цена <span>4900 P</span>
-										</p>
-									</li>
-									<li>
-										<p class="basket-main-popup__product-cell__text quantity">
-											<span>3</span> шт.
-										</p>
-										<a href="#" class="basket-popup-close-btn"></a>
-									</li>
-								</ul>
-							</div>
-							<!-- /cell -->
-						</div>
-						<div class="basket-main-popup__slide">
-							<!-- cell -->
-							<div class="basket-main-popup__product-cell">
-								<ul>
-									<li>
-										<div class="basket-main-popup__product-cell__img">
-											<img src="https://image.freepik.com/free-icon/video-camera_318-49881.png" alt="product">
-										</div>
-									</li>
-									<li>
-										<p class="basket-main-popup__product-cell__text name">
-											<a href="#">Jade S82938-3</a>
-										</p>
-										<p class="basket-main-popup__product-cell__text type">
-											торшер
-										</p>
-										<p class="basket-main-popup__product-cell__text price">
-											цена <span>4900 P</span>
-										</p>
-									</li>
-									<li>
-										<p class="basket-main-popup__product-cell__text quantity">
-											<span>4</span> шт.
-										</p>
-										<a href="#" class="basket-popup-close-btn"></a>
-									</li>
-								</ul>
-							</div>
-							<!-- /cell -->
-						</div>
-						<div class="basket-main-popup__slide">
-							<!-- cell -->
-							<div class="basket-main-popup__product-cell">
-								<ul>
-									<li>
-										<div class="basket-main-popup__product-cell__img">
-											<img src="https://yt3.ggpht.com/-68XseAvyJYY/AAAAAAAAAAI/AAAAAAAAAAA/yNBAhTO1Zbo/s900-c-k-no/photo.jpg" alt="product">
-										</div>
-									</li>
-									<li>
-										<p class="basket-main-popup__product-cell__text name">
-											<a href="#">Jade S82938-3</a>
-										</p>
-										<p class="basket-main-popup__product-cell__text type">
-											торшер
-										</p>
-										<p class="basket-main-popup__product-cell__text price">
-											цена <span>4900 P</span>
-										</p>
-									</li>
-									<li>
-										<p class="basket-main-popup__product-cell__text quantity">
-											<span>5</span> шт.
-										</p>
-										<a href="#" class="basket-popup-close-btn"></a>
-									</li>
-								</ul>
-							</div>
-							<!-- /cell -->
-						</div>
-					</div>
-					<div class="slick-arrow-btn slick-next"></div>
-					<!-- /slider -->
-					<ul class="basket-main-popup__link-and-result">
-						<li>
-							<a href="#">
-								<i class="icon i-eye">
-									<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-										 viewBox="0 0 28.649 28.649" style="enable-background:new 0 0 28.649 28.649;" xml:space="preserve">
-										<g>
-											<g>
-												<path d="M27.598,12.511C24.835,10.265,20.19,7,14.342,6.89c-0.006,0-0.012,0-0.018,0s-0.012,0-0.018,0
-													C8.464,7.002,3.812,10.265,1.052,12.511C0.92,12.62,0.016,13.311,0,14.198c-0.011,0.624,0.28,1.085,0.699,1.47
-													c2.255,2.182,7.176,6.059,13.609,6.088v0.002c0.006,0,0.012,0,0.018,0c0.005,0,0.011,0,0.018,0v-0.002
-													c6.445-0.029,11.354-3.906,13.607-6.088c0.418-0.385,0.708-0.846,0.697-1.47C28.632,13.311,27.73,12.62,27.598,12.511z
-													 M14.326,20.078c-3.162-0.021-5.719-2.59-5.719-5.756c0-3.167,2.557-5.735,5.719-5.755c3.17,0.02,5.718,2.589,5.718,5.755
-													S17.497,20.057,14.326,20.078z"/>
-												<path d="M14.344,12.085c-0.006-0.001-0.012-0.001-0.018-0.001s-0.012,0-0.018,0v0.001
-													c-1.21,0.03-2.186,1.021-2.186,2.237c0,1.217,0.975,2.208,2.186,2.235v0.002c0.006,0,0.012-0.002,0.018-0.002
-													c0.005,0,0.011,0.002,0.018,0.002v-0.002c1.222-0.027,2.186-1.02,2.186-2.235C16.526,13.104,15.563,12.115,14.344,12.085z"/>
-											</g>
-										</g>
-									</svg>
-								</i>
-								<span>К корзине</span>
-							</a>
-						</li>
-						<li>
-							<p>ИТОГО <span>17 800 Р</span></p>
-						</li>
-					</ul>
-					<!--  -->
-					<a href="ordering.html" class="btn basket-main-popup__btn">ОФОРМИТЬ ЗАКАЗ</a>
-				</div>
-				<!-- /basket popup -->
-			</div>
-			<!-- /user nav -->
-		</div>
-	</header>
-	<!-- subheader - number, logo, social -->
-	<div class="page-container">
-		<div class="subheader">
-			<div class="grid-row">
-				<div class="division-3">
-					<a href="tel:8(812)333-33-33">8 (812) 333-33-33</a>
-					<!-- / -->
-					<ul class="phone-link">
-						<li>
-							<a href="#" class="icon i-phone">
-								<svg viewBox="0 0 409.165 409.164">
-									<use xlink:href="#call-circle"></use>
-								</svg>
-							</a>
-						</li>
-					</ul>
-				</div>
-				<div class="division-3">
-					<!-- logo -->
-					<a href="index.html" class="logo">
-						<img src="assets/img/logos/logo.png" alt="logo">
-					</a>
-					<h1>Интернет магазин Светильников</h1>
-					<!-- /logo -->
-				</div>
-				<div class="division-3">
-					<ul class="social-links">
-						<li>
-							<a href="#" class="icon i-social">
-								<svg viewBox="0 0 1 1">
-									<use xlink:href="#fb-circle"></use>
-								</svg>
-							</a>
-						</li>
-						<li>
-							<a href="#" class="icon i-social">
-								<svg viewBox="0 0 1 1">
-									<use xlink:href="#inst-circle"></use>
-								</svg>
-							</a>
-						</li>
-						<li>
-							<a href="#" class="icon i-social">
-								<svg viewBox="0 0 409.165 409.164">
-									<use xlink:href="#tw-circle"></use>
-								</svg>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- /subheader - number, logo, social -->
-	<main>
-		<div class="page-container basket">
-			<div class="title">
-				<h3>КОРЗИНА</h3>
-			</div>
-			<div class="breadcrumbs_wrap">
-				<ul class="breadcrumbs">
-					<li>
-						<a href="#">ГЛАВНАЯ</a>
-					</li>
-					<li>
-						<p>&gt;</p>
-					</li>
-					<li class="current-page">
-						<a href="#">корзина</a>
-					</li>
-				</ul>
-			</div>
-			<div class="basket__container">
-				<div class="basket__table">
-					<div class="basket__table__row basket__table__header">
-						<div class="basket__table__cell basket__table__cell__1">ТОВАР</div>
-						<div class="basket__table__cell basket__table__cell__2">НАИМЕНОВАНИЕ</div>
-						<div class="basket__table__cell basket__table__cell__3">ЦЕНА ЗА ЕДИНИЦУ</div>
-						<div class="basket__table__cell basket__table__cell__4">КОЛ-ВО</div>
-						<div class="basket__table__cell basket__table__cell__5">ИТОГО</div>
-						<div class="basket__table__cell basket__table__cell__6"></div>
-					</div>
-					<!-- item -->
-					<div class="basket__table__row basket__table__item">
-						<div class="basket__table__cell basket__table__cell__1">
-							<img src="assets/img/goods/lamp-1-mini.jpg" alt="img">
-						</div>
-						<div class="basket__table__cell basket__table__cell__2">
-							<div class="basket__table__info">
-								<p class="basket__table__name">White Linen Shade Bronze Plug-in Swing Arm Lamp</p>
-								<p class="basket__table__article"><span>Артикул :</span> LSQ_8907_09</p>
-							</div>
-						</div>
-						<div class="basket__table__cell basket__table__cell__3">
-							<span class="basket__table__price">1</span><span>&#160;Р</span>
-						</div>
-						<div class="basket__table__cell basket__table__cell__4">
-							<ul class="item-counter">
-								<li>
-									<a href="#" class="icon i-circle-chrest item-minus">
-										<svg viewBox="0 0 1 1">
-											<use xlink:href="#minus"></use>
-										</svg>
-									</a>
-								</li>
-								<li>
-									<input type="text" class="item-counter-input" disabled value="1">
-								</li>
-								<li>
-									<a href="#" class="icon i-circle-chrest item-plus">
-										<svg viewBox="0 0 1 1">
-											<use xlink:href="#plus"></use>
-										</svg>
-									</a>
-								</li>
-							</ul>
-						</div>
-						<div class="basket__table__cell basket__table__cell__5">
-							<span class="basket__table__price-end">1</span><span>&#160;Р</span>
-						</div>
-						<div class="basket__table__cell basket__table__cell__6">
-							<a href="#" class="icon i-circle-chrest delite-item">
-								<svg viewBox="0 0 1 1">
-									<use xlink:href="#circle-chest"></use>
-								</svg>
-							</a>
-						</div>
-					</div>
-					<!-- /item -->
-					<!-- item -->
-					<div class="basket__table__row basket__table__item">
-						<div class="basket__table__cell basket__table__cell__1">
-							<img src="assets/img/goods/lamp-2-mini.jpg" alt="img">
-						</div>
-						<div class="basket__table__cell basket__table__cell__2">
-							<div class="basket__table__info">
-								<p class="basket__table__name">White Linen Shade Bronze Plug-in Swing Arm Lamp</p>
-								<p class="basket__table__article"><span>Артикул :</span> LSQ_8907_09</p>
-							</div>
-						</div>
-						<div class="basket__table__cell basket__table__cell__3">
-							<span class="basket__table__price">1</span><span>&#160;Р</span>
-						</div>
-						<div class="basket__table__cell basket__table__cell__4">
-							<ul class="item-counter">
-								<li>
-									<a href="#" class="icon i-circle-chrest item-minus">
-										<svg viewBox="0 0 1 1">
-											<use xlink:href="#minus"></use>
-										</svg>
-									</a>
-								</li>
-								<li>
-									<input type="text" class="item-counter-input" disabled value="1">
-								</li>
-								<li>
-									<a href="#" class="icon i-circle-chrest item-plus">
-										<svg viewBox="0 0 1 1">
-											<use xlink:href="#plus"></use>
-										</svg>
-									</a>
-								</li>
-							</ul>
-						</div>
-						<div class="basket__table__cell basket__table__cell__5">
-							<span class="basket__table__price-end">1</span><span>&#160;Р</span>
-						</div>
-						<div class="basket__table__cell basket__table__cell__6">
-							<a href="#" class="icon i-circle-chrest delite-item">
-								<svg viewBox="0 0 1 1">
-									<use xlink:href="#circle-chest"></use>
-								</svg>
-							</a>
-						</div>
-					</div>
-					<!-- /item -->
-					<div class="basket__table__row basket__table__footer">
-						<p>ИТОГО <span class="total-price">27200</span> Р</p>
-					</div>
-					<div class="basket__table__row basket__table__buttons">
-						<a href="article.html" class="btn btn__whote-2-black">КУПИТЬ В 1 КЛИК</a>
-						<a href="article.html" class="btn btn__green-2-green">ОФОРМИТЬ ЗАКАЗ</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</main>
-	<footer>
-		<div class="page-container clearfix">
-			<ul class="footer-ul-cells">
-				<li class="footer-li-cells">
-					<!-- list -->
-					<ul class="footer-ul-list">
-						<li class="footer-li-list">
-							<a href="#" class="logo-mini">
-								<img src="assets/img/logos/logo-min.png" alt="logo">
-							</a>
-						</li>
-						<li class="footer-li-list">
-							<a href="mailto:support@lightonline.ru" class="logo-mini">
-								support@lightonline.ru
-							</a>
-						</li>
-						<li class="footer-li-list">
-							<a href="tel:8(812)333-33-33" class="logo-mini">
-								8 (812) 333-33-33
-							</a>
-						</li>
-					</ul>
-				</li>
-				<li class="footer-li-cells">
-					<!-- list -->
-					<ul class="footer-ul-list">
-						<li class="footer-li-list">
-							<h4>LIGHT ONLINE</h4>
-						</li>
-						<li class="footer-li-list">
-							<a href="#">Доставка и оплата</a>
-						</li>
-						<li class="footer-li-list">
-							<a href="#">Установка</a>
-						</li>
-						<li class="footer-li-list">
-							<a href="#">Инфо-центр</a>
-						</li>
-						<li class="footer-li-list">
-							<a href="#">Контакты</a>
-						</li>
-					</ul>
-				</li>
-				<li class="footer-li-cells">
-					<!-- list -->
-					<ul class="footer-ul-list">
-						<li class="footer-li-list">
-							<h4>КАТАЛОГ</h4>
-						</li>
-						<li class="footer-li-list">
-							<a href="#">Basic</a>
-						</li>
-						<li class="footer-li-list">
-							<a href="#">Premium</a>
-						</li>
-						<li class="footer-li-list">
-							<a href="#">Professional</a>
-						</li>
-					</ul>
-				</li>
-				<li class="footer-li-cells">
-					<!-- list -->
-					<ul class="footer-ul-list">
-						<li class="footer-li-list">
-							<h4>ПОМОЩЬ</h4>
-						</li>
-						<li class="footer-li-list">
-							<a href="#">Статус заказа</a>
-						</li>
-						<li class="footer-li-list">
-							<a href="#">Возврат товара</a>
-						</li>
-						<li class="footer-li-list">
-							<a href="#">FAQ</a>
-						</li>
-					</ul>
-				</li>
-			</ul>
-			<ul class="footer-ul-cells">
-				<li class="footer-li-cells">
-					<ul class="footer-ul-list">
-						<li class="footer-li-list">
-							<p>
-								Если Вы хотите получать новости от нашей компании,<br>введите адрес Вашей электронной почты в форму ниже
-							</p>
-						</li>
-						<li class="footer-li-list">
-							<form action="#" method="#" class="subscribe">
-								<input type="text" placeholder="Ваш e-mail">
-								<input type="submit" value=" ">
-							</form>
-						</li>
-						<li class="footer-li-list">
-							<a href="#">© 2015 "Light Online" - интернет магазин светильников. Все права защищены.</a>
-						</li>
-						<li class="footer-li-list">
-							<a href="https://skipodevelop.ru/" target="_blank">Разработано Skipo</a>
-						</li>
-					</ul>
-				</li>
-			</ul>
-		</div>
-	</footer>
 	<div class="svg-sprites">
 	
 	
@@ -1730,6 +1103,637 @@
 	
 	
 	</div>
+	<div class="search-window">
+		<div class="search-window__close-wrap"></div>
+		<div class="search-window__content">
+			<form action="" method="">
+				<input type="text" id="search"><label for="search">Введите ключевое слово...</label>
+			</form>
+		</div>
+	</div>
+	<header>
+		<div class="page-container header-content clearfix">
+			<nav class="navigation">
+				<ul>
+					<li class="inner-menu">
+						<a href="#">
+							<span class="first-nav-btn">каталог</span>
+						</a>
+						<!-- Inner Menu First Level -->
+						<ul>
+							<li>
+								<a href="categories.html">
+									<span>basic</span>
+								</a>
+								<div class="nav-popup-content">
+									<div class="nav-popup-content__block">
+										<a href="#">Подвесные люстры</a>
+									</div>
+									<div class="nav-popup-content__block">
+										<a href="#">Споты</a>
+									</div>
+									<div class="nav-popup-content__block">
+										<a href="#">Торшеры</a>
+									</div>
+									<div class="nav-popup-content__block">
+										<a href="#">Подвесные светильники</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<a href="categories.html">
+									<span>premium</span>
+								</a>
+								<div class="nav-popup-content">
+									<div class="nav-popup-content__block">
+										<a href="categories.html">Подвесные люстры</a>
+									</div>
+									<div class="nav-popup-content__block">
+										<a href="index.html">Споты</a>
+									</div>
+									<div class="nav-popup-content__block">
+										<a href="#">Торшеры</a>
+									</div>
+									<div class="nav-popup-content__block">
+										<a href="#">Подвесные светильники</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<a href="categories.html">
+									<span>professional</span>
+								</a>
+								<div class="nav-popup-content">
+									<div class="nav-popup-content__block">
+										<a href="#">Подвесные люстры</a>
+									</div>
+									<div class="nav-popup-content__block">
+										<a href="#">Споты</a>
+									</div>
+									<div class="nav-popup-content__block">
+										<a href="#">Торшеры</a>
+									</div>
+									<div class="nav-popup-content__block">
+										<a href="#">Подвесные светильники</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="get-project.html">
+							<div class="nav-text-wrap">
+								<span data-hover="рассчитать проект">рассчитать проект</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="delivery.html">
+							<div class="nav-text-wrap">
+								<span data-hover="доставка и оплата">доставка и оплата</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="nav-text-wrap">
+								<span data-hover="установка">установка</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="blog.html">
+							<div class="nav-text-wrap">
+								<span data-hover="блог">блог</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="about-company.html">
+							<div class="nav-text-wrap">
+								<span data-hover="о компании">о компании</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="contacts.html">
+							<div class="nav-text-wrap">
+								<span data-hover="контакты">контакты</span>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<!-- user nav -->
+			<div class="user-nav">
+				<ul class="user-nav-list">
+					<li>
+						<a href="#">
+							<i class="icon i-basket">
+								<svg viewBox="0 0 409.165 409.164">
+									<use xlink:href="#user-svg"></use>
+								</svg>
+							</i>
+							<span>вход</span>
+						</a>
+					</li>
+					<li>
+						<a href="basket.html" class="go-to-cart">
+							<i class="icon i-basket">
+								<svg viewBox="0 0 348.047 348.047">
+									<use xlink:href="#basket-svg"></use>
+								</svg>
+								<span class="count-of-goods">1</span>
+							</i>
+							<span>корзина</span>
+						</a>
+					</li>
+				</ul>
+				<div class="search-btn"></div>
+				<!-- basket popup -->
+				<div class="basket-main-popup">
+					<!-- slider -->
+					<div class="slick-arrow-btn slick-prev"></div>
+					<div id="basket-popup-slider" class="basket-main-popup__slider">
+						<div class="basket-main-popup__slide">
+							<!-- cell -->
+							<div class="basket-main-popup__product-cell">
+								<ul>
+									<li>
+										<div class="basket-main-popup__product-cell__img">
+											<img src="https://image.freepik.com/free-icon/video-camera_318-49881.png" alt="product">
+										</div>
+									</li>
+									<li>
+										<p class="basket-main-popup__product-cell__text name">
+											<a href="#">Jade S82938-3</a>
+										</p>
+										<p class="basket-main-popup__product-cell__text type">
+											торшер
+										</p>
+										<p class="basket-main-popup__product-cell__text price">
+											цена <span>4900 P</span>
+										</p>
+									</li>
+									<li>
+										<p class="basket-main-popup__product-cell__text quantity">
+											<span>1</span> шт.
+										</p>
+										<a href="#" class="basket-popup-close-btn"></a>
+									</li>
+								</ul>
+							</div>
+							<!-- /cell -->
+						</div>
+						<div class="basket-main-popup__slide">
+							<!-- cell -->
+							<div class="basket-main-popup__product-cell">
+								<ul>
+									<li>
+										<div class="basket-main-popup__product-cell__img">
+											<img src="https://yt3.ggpht.com/-O2pWB5rnPtU/AAAAAAAAAAI/AAAAAAAAAAA/ogPef_qsJ94/s900-c-k-no/photo.jpg" alt="product">
+										</div>
+									</li>
+									<li>
+										<p class="basket-main-popup__product-cell__text name">
+											<a href="#">Jade S82938-3</a>
+										</p>
+										<p class="basket-main-popup__product-cell__text type">
+											торшер
+										</p>
+										<p class="basket-main-popup__product-cell__text price">
+											цена <span>4900 P</span>
+										</p>
+									</li>
+									<li>
+										<p class="basket-main-popup__product-cell__text quantity">
+											<span>2</span> шт.
+										</p>
+										<a href="#" class="basket-popup-close-btn"></a>
+									</li>
+								</ul>
+							</div>
+							<!-- /cell -->
+						</div>
+						<div class="basket-main-popup__slide">
+							<!-- cell -->
+							<div class="basket-main-popup__product-cell">
+								<ul>
+									<li>
+										<div class="basket-main-popup__product-cell__img">
+											<img src="https://image.freepik.com/free-icon/video-camera_318-49881.png" alt="product">
+										</div>
+									</li>
+									<li>
+										<p class="basket-main-popup__product-cell__text name">
+											<a href="#">Jade S82938-3</a>
+										</p>
+										<p class="basket-main-popup__product-cell__text type">
+											торшер
+										</p>
+										<p class="basket-main-popup__product-cell__text price">
+											цена <span>4900 P</span>
+										</p>
+									</li>
+									<li>
+										<p class="basket-main-popup__product-cell__text quantity">
+											<span>3</span> шт.
+										</p>
+										<a href="#" class="basket-popup-close-btn"></a>
+									</li>
+								</ul>
+							</div>
+							<!-- /cell -->
+						</div>
+						<div class="basket-main-popup__slide">
+							<!-- cell -->
+							<div class="basket-main-popup__product-cell">
+								<ul>
+									<li>
+										<div class="basket-main-popup__product-cell__img">
+											<img src="https://image.freepik.com/free-icon/video-camera_318-49881.png" alt="product">
+										</div>
+									</li>
+									<li>
+										<p class="basket-main-popup__product-cell__text name">
+											<a href="#">Jade S82938-3</a>
+										</p>
+										<p class="basket-main-popup__product-cell__text type">
+											торшер
+										</p>
+										<p class="basket-main-popup__product-cell__text price">
+											цена <span>4900 P</span>
+										</p>
+									</li>
+									<li>
+										<p class="basket-main-popup__product-cell__text quantity">
+											<span>4</span> шт.
+										</p>
+										<a href="#" class="basket-popup-close-btn"></a>
+									</li>
+								</ul>
+							</div>
+							<!-- /cell -->
+						</div>
+						<div class="basket-main-popup__slide">
+							<!-- cell -->
+							<div class="basket-main-popup__product-cell">
+								<ul>
+									<li>
+										<div class="basket-main-popup__product-cell__img">
+											<img src="https://yt3.ggpht.com/-68XseAvyJYY/AAAAAAAAAAI/AAAAAAAAAAA/yNBAhTO1Zbo/s900-c-k-no/photo.jpg" alt="product">
+										</div>
+									</li>
+									<li>
+										<p class="basket-main-popup__product-cell__text name">
+											<a href="#">Jade S82938-3</a>
+										</p>
+										<p class="basket-main-popup__product-cell__text type">
+											торшер
+										</p>
+										<p class="basket-main-popup__product-cell__text price">
+											цена <span>4900 P</span>
+										</p>
+									</li>
+									<li>
+										<p class="basket-main-popup__product-cell__text quantity">
+											<span>5</span> шт.
+										</p>
+										<a href="#" class="basket-popup-close-btn"></a>
+									</li>
+								</ul>
+							</div>
+							<!-- /cell -->
+						</div>
+					</div>
+					<div class="slick-arrow-btn slick-next"></div>
+					<!-- /slider -->
+					<ul class="basket-main-popup__link-and-result">
+						<li>
+							<a href="#">
+								<i class="icon i-eye">
+									<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+										 viewBox="0 0 28.649 28.649" style="enable-background:new 0 0 28.649 28.649;" xml:space="preserve">
+										<g>
+											<g>
+												<path d="M27.598,12.511C24.835,10.265,20.19,7,14.342,6.89c-0.006,0-0.012,0-0.018,0s-0.012,0-0.018,0
+													C8.464,7.002,3.812,10.265,1.052,12.511C0.92,12.62,0.016,13.311,0,14.198c-0.011,0.624,0.28,1.085,0.699,1.47
+													c2.255,2.182,7.176,6.059,13.609,6.088v0.002c0.006,0,0.012,0,0.018,0c0.005,0,0.011,0,0.018,0v-0.002
+													c6.445-0.029,11.354-3.906,13.607-6.088c0.418-0.385,0.708-0.846,0.697-1.47C28.632,13.311,27.73,12.62,27.598,12.511z
+													 M14.326,20.078c-3.162-0.021-5.719-2.59-5.719-5.756c0-3.167,2.557-5.735,5.719-5.755c3.17,0.02,5.718,2.589,5.718,5.755
+													S17.497,20.057,14.326,20.078z"/>
+												<path d="M14.344,12.085c-0.006-0.001-0.012-0.001-0.018-0.001s-0.012,0-0.018,0v0.001
+													c-1.21,0.03-2.186,1.021-2.186,2.237c0,1.217,0.975,2.208,2.186,2.235v0.002c0.006,0,0.012-0.002,0.018-0.002
+													c0.005,0,0.011,0.002,0.018,0.002v-0.002c1.222-0.027,2.186-1.02,2.186-2.235C16.526,13.104,15.563,12.115,14.344,12.085z"/>
+											</g>
+										</g>
+									</svg>
+								</i>
+								<span>К корзине</span>
+							</a>
+						</li>
+						<li>
+							<p>ИТОГО <span>17 800 Р</span></p>
+						</li>
+					</ul>
+					<!--  -->
+					<a href="ordering.html" class="btn basket-main-popup__btn">ОФОРМИТЬ ЗАКАЗ</a>
+				</div>
+				<!-- /basket popup -->
+			</div>
+			<!-- /user nav -->
+		</div>
+	</header>
+	<!-- subheader - number, logo, social -->
+	<div class="page-container">
+		<div class="subheader">
+			<div class="grid-row">
+				<div class="division-3">
+					<a href="tel:8(812)333-33-33">8 (812) 333-33-33</a>
+					<!-- / -->
+					<ul class="phone-link">
+						<li>
+							<a href="#" class="icon i-phone">
+								<svg viewBox="0 0 409.165 409.164">
+									<use xlink:href="#call-circle" /></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="division-3">
+					<!-- logo -->
+					<a href="index.html" class="logo">
+						<img src="assets/img/logos/logo.png" alt="logo">
+					</a>
+					<h1>Интернет магазин Светильников</h1>
+					<!-- /logo -->
+				</div>
+				<div class="division-3">
+					<ul class="social-links">
+						<li>
+							<a href="#" class="icon i-social">
+								<svg viewBox="0 0 1 1">
+									<use xlink:href="#fb-circle"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="icon i-social">
+								<svg viewBox="0 0 1 1">
+									<use xlink:href="#inst-circle"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="icon i-social">
+								<svg viewBox="0 0 409.165 409.164">
+									<use xlink:href="#tw-circle"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /subheader - number, logo, social -->
+	<main>
+		<div class="page-container basket">
+			<div class="title">
+				<h3>КОРЗИНА</h3>
+			</div>
+			<div class="breadcrumbs_wrap">
+				<ul class="breadcrumbs">
+					<li>
+						<a href="#">ГЛАВНАЯ</a>
+					</li>
+					<li>
+						<p>&gt;</p>
+					</li>
+					<li class="current-page">
+						<a href="#">корзина</a>
+					</li>
+				</ul>
+			</div>
+			<div class="basket__container">
+				<div class="basket__table">
+					<div class="basket__table__row basket__table__header">
+						<div class="basket__table__cell basket__table__cell__1">ТОВАР</div>
+						<div class="basket__table__cell basket__table__cell__2">НАИМЕНОВАНИЕ</div>
+						<div class="basket__table__cell basket__table__cell__3">ЦЕНА ЗА ЕДИНИЦУ</div>
+						<div class="basket__table__cell basket__table__cell__4">КОЛ-ВО</div>
+						<div class="basket__table__cell basket__table__cell__5">ИТОГО</div>
+						<div class="basket__table__cell basket__table__cell__6"></div>
+					</div>
+					<!-- item -->
+					<div class="basket__table__row basket__table__item">
+						<div class="basket__table__cell basket__table__cell__1">
+							<img src="assets/img/goods/lamp-1-mini.jpg" alt="img">
+						</div>
+						<div class="basket__table__cell basket__table__cell__2">
+							<div class="basket__table__info">
+								<p class="basket__table__name">White Linen Shade Bronze Plug-in Swing Arm Lamp</p>
+								<p class="basket__table__article"><span>Артикул :</span> LSQ_8907_09</p>
+							</div>
+						</div>
+						<div class="basket__table__cell basket__table__cell__3">
+							<span class="basket__table__price">1</span><span>&#160;Р</span>
+						</div>
+						<div class="basket__table__cell basket__table__cell__4">
+							<ul class="item-counter">
+								<li>
+									<a href="#" class="icon i-circle-chrest item-minus">
+										<svg viewBox="0 0 1 1">
+											<use xlink:href="#minus"></use>
+										</svg>
+									</a>
+								</li>
+								<li>
+									<input type="text" class="item-counter-input" disabled value="1">
+								</li>
+								<li>
+									<a href="#" class="icon i-circle-chrest item-plus">
+										<svg viewBox="0 0 1 1">
+											<use xlink:href="#plus"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="basket__table__cell basket__table__cell__5">
+							<span class="basket__table__price-end">1</span><span>&#160;Р</span>
+						</div>
+						<div class="basket__table__cell basket__table__cell__6">
+							<a href="#" class="icon i-circle-chrest delite-item">
+								<svg viewBox="0 0 1 1">
+									<use xlink:href="#circle-chest"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+					<!-- /item -->
+					<!-- item -->
+					<div class="basket__table__row basket__table__item">
+						<div class="basket__table__cell basket__table__cell__1">
+							<img src="assets/img/goods/lamp-2-mini.jpg" alt="img">
+						</div>
+						<div class="basket__table__cell basket__table__cell__2">
+							<div class="basket__table__info">
+								<p class="basket__table__name">White Linen Shade Bronze Plug-in Swing Arm Lamp</p>
+								<p class="basket__table__article"><span>Артикул :</span> LSQ_8907_09</p>
+							</div>
+						</div>
+						<div class="basket__table__cell basket__table__cell__3">
+							<span class="basket__table__price">1</span><span>&#160;Р</span>
+						</div>
+						<div class="basket__table__cell basket__table__cell__4">
+							<ul class="item-counter">
+								<li>
+									<a href="#" class="icon i-circle-chrest item-minus">
+										<svg viewBox="0 0 1 1">
+											<use xlink:href="#minus"></use>
+										</svg>
+									</a>
+								</li>
+								<li>
+									<input type="text" class="item-counter-input" disabled value="1">
+								</li>
+								<li>
+									<a href="#" class="icon i-circle-chrest item-plus">
+										<svg viewBox="0 0 1 1">
+											<use xlink:href="#plus"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="basket__table__cell basket__table__cell__5">
+							<span class="basket__table__price-end">1</span><span>&#160;Р</span>
+						</div>
+						<div class="basket__table__cell basket__table__cell__6">
+							<a href="#" class="icon i-circle-chrest delite-item">
+								<svg viewBox="0 0 1 1">
+									<use xlink:href="#circle-chest"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+					<!-- /item -->
+					<div class="basket__table__row basket__table__footer">
+						<p>ИТОГО <span class="total-price">27200</span> Р</p>
+					</div>
+					<div class="basket__table__row basket__table__buttons">
+						<a href="article.html" class="btn btn__whote-2-black">КУПИТЬ В 1 КЛИК</a>
+						<a href="article.html" class="btn btn__green-2-green">ОФОРМИТЬ ЗАКАЗ</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<div class="page-container clearfix">
+			<ul class="footer-ul-cells">
+				<li class="footer-li-cells">
+					<!-- list -->
+					<ul class="footer-ul-list">
+						<li class="footer-li-list">
+							<a href="#" class="logo-mini">
+								<img src="assets/img/logos/logo-min.png" alt="logo">
+							</a>
+						</li>
+						<li class="footer-li-list">
+							<a href="mailto:support@lightonline.ru" class="logo-mini">
+								support@lightonline.ru
+							</a>
+						</li>
+						<li class="footer-li-list">
+							<a href="tel:8(812)333-33-33" class="logo-mini">
+								8 (812) 333-33-33
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="footer-li-cells">
+					<!-- list -->
+					<ul class="footer-ul-list">
+						<li class="footer-li-list">
+							<h4>LIGHT ONLINE</h4>
+						</li>
+						<li class="footer-li-list">
+							<a href="#">Доставка и оплата</a>
+						</li>
+						<li class="footer-li-list">
+							<a href="#">Установка</a>
+						</li>
+						<li class="footer-li-list">
+							<a href="#">Инфо-центр</a>
+						</li>
+						<li class="footer-li-list">
+							<a href="#">Контакты</a>
+						</li>
+					</ul>
+				</li>
+				<li class="footer-li-cells">
+					<!-- list -->
+					<ul class="footer-ul-list">
+						<li class="footer-li-list">
+							<h4>КАТАЛОГ</h4>
+						</li>
+						<li class="footer-li-list">
+							<a href="#">Basic</a>
+						</li>
+						<li class="footer-li-list">
+							<a href="#">Premium</a>
+						</li>
+						<li class="footer-li-list">
+							<a href="#">Professional</a>
+						</li>
+					</ul>
+				</li>
+				<li class="footer-li-cells">
+					<!-- list -->
+					<ul class="footer-ul-list">
+						<li class="footer-li-list">
+							<h4>ПОМОЩЬ</h4>
+						</li>
+						<li class="footer-li-list">
+							<a href="#">Статус заказа</a>
+						</li>
+						<li class="footer-li-list">
+							<a href="#">Возврат товара</a>
+						</li>
+						<li class="footer-li-list">
+							<a href="#">FAQ</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<ul class="footer-ul-cells">
+				<li class="footer-li-cells">
+					<ul class="footer-ul-list">
+						<li class="footer-li-list">
+							<p>
+								Если Вы хотите получать новости от нашей компании,<br>введите адрес Вашей электронной почты в форму ниже
+							</p>
+						</li>
+						<li class="footer-li-list">
+							<form action="#" method="#" class="subscribe">
+								<input type="text" placeholder="Ваш e-mail">
+								<input type="submit" value=" ">
+							</form>
+						</li>
+						<li class="footer-li-list">
+							<a href="#">© 2015 "Light Online" - интернет магазин светильников. Все права защищены.</a>
+						</li>
+						<li class="footer-li-list">
+							<a href="https://skipodevelop.ru/" target="_blank">Разработано Skipo</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</footer>
 	<div class="modal-window" id="modal-1">
 		<h1>Привет!</h1>
 		<p>Я модальное окно</p>
@@ -1775,6 +1779,15 @@
 	
 	<!-- jquery.validate.min.js -->
 	<script type="text/javascript" src="assets/js/jquery.validate.min.js"></script>
+	
+	<!-- wNumb.js -->
+	<script type="text/javascript" src="assets/modules/wnumb/wNumb.js"></script>
+	
+	<!-- nouislider -->
+	<script type="text/javascript" src="assets/modules/nouislider/nouislider.min.js"></script>
+	
+	<!-- selectize -->
+	<script type="text/javascript" src="assets/modules/fancyselect/fancySelect.js"></script>
 	
 	<!-- Main JS -->
 	<script type="text/javascript" src="assets/js/main.js"></script>

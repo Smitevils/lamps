@@ -113,13 +113,14 @@
 .font-icon-check:before {
     content: "\e901";
 }
+.font-icon-arrow-down {
+	transform: rotate(90deg);
+}
 .font-icon-arrow-down:before {
-    content: "\e900";
+    content: "\e900"; 
+    display: inline-block;
+    transition: transform 0.3s;
 }
-.font-icon-arrow-right:before {
-    content: "\e900";
-}
-
 
 @mixin ProximaNova {
 	font-family: 'ProximaNova', ProximaNova, sans-serif;

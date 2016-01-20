@@ -201,11 +201,21 @@ $('.bestsellers-slider').slick({
 });
 
 //
-
+function checkOpenFilter() {
+	if ($('.main-filter__container').is('.open')) {
+		$('.main-filter__container').slideDown('fast');
+	} else {
+		$('.main-filter__container').slideUp('fast');
+	}
+}
+checkOpenFilter();
 $('.btn__main-filter-search').on('click', function(event) {
 	event.preventDefault();
 	/* Act on the event */
-	$('.main-filter__container').slideToggle("fast");
+	$(this).toggleClass('open');
+	//$('.main-filter__container').slideToggle("fast");
+	$('.main-filter__container').toggleClass('open');
+	checkOpenFilter();
 });
 
 /* tabtab.js */
@@ -450,5 +460,88 @@ if($('#map').length > 0){
             }
         google.maps.event.addDomListener(window, 'load', init);
 }
+
+/* filter */
+
+// var snapSlider = document.getElementById('price-limit');
+
+// noUiSlider.create(snapSlider, {
+// 	start: [5000, 10000],
+// 	step: 1000,
+// 	connect: true,
+// 	range: {
+// 		'min': 0,
+// 		'max': 20000
+// 	},
+// 	format: wNumb({
+// 		decimals: 1,
+// 		mark: '//',
+// 		thousand: '',
+// 		prefix: 'от ',
+// 		postfix: '',
+// 	})
+// });
+// var snapValues = [
+// 	document.getElementById('slider-snap-value-lower'),
+// 	document.getElementById('slider-snap-value-upper')
+// ];
+
+var priceSlider = $('#price-limit')[0];
+noUiSlider.create(priceSlider, {
+	start: [5000, 10000],
+	step: 1000,
+	connect: true,
+	range: {
+		'min': 0,
+		'max': 20000
+	},
+	format: wNumb({
+		decimals: 1,
+		mark: '',
+		thousand: '',
+		prefix: 'от ',
+		postfix: '',
+	})
+});
+var priceSliderSnapValues = [
+	$('#price-limit').parents('.filter-slider').find('.slider-snap-value-lower')[0],
+	$('#price-limit').parents('.filter-slider').find('.slider-snap-value-upper')[0]
+];
+priceSlider.noUiSlider.on('update', function( values, handle ) {
+	priceSliderSnapValues[handle].innerHTML = values[handle];
+});
+
+var quantitySlider = $('#quantity-limit')[0];
+noUiSlider.create(quantitySlider, {
+	start: [5000, 10000],
+	step: 1000,
+	connect: true,
+	range: {
+		'min': 0,
+		'max': 20000
+	},
+	format: wNumb({
+		decimals: 1,
+		mark: '',
+		thousand: '',
+		prefix: 'от ',
+		postfix: '',
+	})
+});
+var quantitySliderSnapValues = [
+	$('#quantity-limit').parents('.filter-slider').find('.slider-snap-value-lower')[0],
+	$('#quantity-limit').parents('.filter-slider').find('.slider-snap-value-upper')[0]
+];
+quantitySlider.noUiSlider.on('update', function( values, handle ) {
+	quantitySliderSnapValues[handle].innerHTML = values[handle];
+});
+
+/* selects */ 
+
+// initialize the selectize control
+//$('#manufacturer').fancySelect();
+
+// fetch the instance
+//var selectize = $select[0].selectize;
 
 });
