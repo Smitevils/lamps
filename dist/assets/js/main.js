@@ -200,6 +200,15 @@ $('.bestsellers-slider').slick({
 	nextArrow: '<button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;"></button>'
 });
 
+$('.may-like').slick({
+	infinite: true,
+	speed: 500,
+	slidesToShow: 4,
+	slidesToScroll: 4,
+	prevArrow: '<button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="display: block;"></button>',
+	nextArrow: '<button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;"></button>'
+});
+
 //
 function checkOpenFilter() {
 	if ($('.main-filter__container').is('.open')) {
@@ -340,7 +349,7 @@ $('.delite-item').click(function(event) {
 		item.remove();
 		checkEndPrice();
 	}, 400);
-	
+
 });
 checkEndPrice();
 
@@ -405,7 +414,7 @@ $('#get-project__upload-file').change(function(event) {
 
 /* карты */
 
-if($('#map').length > 0){
+if($('#map').length != 0){
 
             function init() {
                 // Basic options for a simple Google Map
@@ -420,9 +429,9 @@ if($('#map').length > 0){
 		            disableDefaultUI: false,
             		draggable: true,
                     // The latitude and longitude to center the map (always required)
-                    center: new google.maps.LatLng(document.getElementById('map').dataset.centerx, document.getElementById('map').dataset.centery), 
+                    center: new google.maps.LatLng(document.getElementById('map').dataset.centerx, document.getElementById('map').dataset.centery),
 
-                    // How you would like to style the map. 
+                    // How you would like to style the map.
                     // This is where you would paste any style found on Snazzy Maps.
                     styles:[
 							  {
@@ -436,9 +445,9 @@ if($('#map').length > 0){
 							]
                     };
 
-                // Get the HTML DOM element that will contain your map 
+                // Get the HTML DOM element that will contain your map
                 // We are using a div with id="map" seen below in the <body>
-                var mapElement = document.getElementById('map');     
+                var mapElement = document.getElementById('map');
 
                 // Create the Google Map using our element and options defined above
 
@@ -485,63 +494,161 @@ if($('#map').length > 0){
 // 	document.getElementById('slider-snap-value-lower'),
 // 	document.getElementById('slider-snap-value-upper')
 // ];
+if ($("#price-limit").length != 0) {
+	var priceSlider = $('#price-limit')[0];
+	noUiSlider.create(priceSlider, {
+		start: [5000, 10000],
+		step: 1000,
+		connect: true,
+		range: {
+			'min': 0,
+			'max': 20000
+		},
+		format: wNumb({
+			decimals: 1,
+			mark: '',
+			thousand: '',
+			prefix: 'от ',
+			postfix: '',
+		})
+	});
+	var priceSliderSnapValues = [
+		$('#price-limit').parents('.filter-slider').find('.slider-snap-value-lower')[0],
+		$('#price-limit').parents('.filter-slider').find('.slider-snap-value-upper')[0]
+	];
+	priceSlider.noUiSlider.on('update', function( values, handle ) {
+		priceSliderSnapValues[handle].innerHTML = values[handle];
+	});
+};
 
-var priceSlider = $('#price-limit')[0];
-noUiSlider.create(priceSlider, {
-	start: [5000, 10000],
-	step: 1000,
-	connect: true,
-	range: {
-		'min': 0,
-		'max': 20000
-	},
-	format: wNumb({
-		decimals: 1,
-		mark: '',
-		thousand: '',
-		prefix: 'от ',
-		postfix: '',
-	})
-});
-var priceSliderSnapValues = [
-	$('#price-limit').parents('.filter-slider').find('.slider-snap-value-lower')[0],
-	$('#price-limit').parents('.filter-slider').find('.slider-snap-value-upper')[0]
-];
-priceSlider.noUiSlider.on('update', function( values, handle ) {
-	priceSliderSnapValues[handle].innerHTML = values[handle];
-});
+if ($("#quantity-limit").length != 0) {
+	var quantitySlider = $('#quantity-limit')[0];
+	noUiSlider.create(quantitySlider, {
+		start: [5000, 10000],
+		step: 1000,
+		connect: true,
+		range: {
+			'min': 0,
+			'max': 20000
+		},
+		format: wNumb({
+			decimals: 1,
+			mark: '',
+			thousand: '',
+			prefix: 'от ',
+			postfix: '',
+		})
+	});
+	var quantitySliderSnapValues = [
+		$('#quantity-limit').parents('.filter-slider').find('.slider-snap-value-lower')[0],
+		$('#quantity-limit').parents('.filter-slider').find('.slider-snap-value-upper')[0]
+	];
+	quantitySlider.noUiSlider.on('update', function( values, handle ) {
+		quantitySliderSnapValues[handle].innerHTML = values[handle];
+	});
+};
 
-var quantitySlider = $('#quantity-limit')[0];
-noUiSlider.create(quantitySlider, {
-	start: [5000, 10000],
-	step: 1000,
-	connect: true,
-	range: {
-		'min': 0,
-		'max': 20000
-	},
-	format: wNumb({
-		decimals: 1,
-		mark: '',
-		thousand: '',
-		prefix: 'от ',
-		postfix: '',
-	})
-});
-var quantitySliderSnapValues = [
-	$('#quantity-limit').parents('.filter-slider').find('.slider-snap-value-lower')[0],
-	$('#quantity-limit').parents('.filter-slider').find('.slider-snap-value-upper')[0]
-];
-quantitySlider.noUiSlider.on('update', function( values, handle ) {
-	quantitySliderSnapValues[handle].innerHTML = values[handle];
-});
-
-/* selects */ 
+/* selects */
 
 // initialize the selectize control
 //$('#manufacturer').fancySelect();
 
 // fetch the instance
 //var selectize = $select[0].selectize;
+
+/* card galery */
+if ($("#galery-slider-for-1").length != 0 && $('#galery-slider-nav-1').length != 0) {
+	$('#galery-slider-for-1').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: true,
+		fade: true,
+		asNavFor: '.galery-slider-nav-1',
+		infinite: true
+	});
+	$('#galery-slider-nav-1').slick({
+		slidesToShow: 5,
+		slidesToScroll: 1,
+		asNavFor: '#galery-slider-for-1',
+		dots: false,
+		arrows: false,
+		vertical: true,
+		centerMode: false,
+		focusOnSelect: true,
+		infinite: true
+	});
+};
+
+if ($("#galery-slider-for-2").length != 0 && $('#galery-slider-nav-2').length != 0) {
+	$('#galery-slider-for-2').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: true,
+		fade: true,
+		asNavFor: '#galery-slider-nav-2',
+		infinite: true
+	});
+	$('#galery-slider-nav-2').slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		asNavFor: '#galery-slider-for-2',
+		dots: false,
+		arrows: false,
+		vertical: true,
+		centerMode: false,
+		focusOnSelect: true,
+		infinite: true
+	});
+};
+
+
+
+/* fixed menu for scroll page */
+
+var scrolled = 0; // переменная хранит значение page scrollTop
+scrolled = window.pageYOffset || document.documentElement.scrollTop;
+//console.log(scrolled);
+
+window.onscroll = function() {
+  scrolled = window.pageYOffset || document.documentElement.scrollTop;
+  //console.log(scrolled);
+  //
+	if (scrolled >= 200) {
+		$('body').addClass('scrolled');
+		$('header').removeClass('animated fadeOutUp');
+		$('header').addClass('animated fadeInDown');
+	} else if (scrolled <= 200 && scrolled >= 100) {
+		$('header').removeClass('animated fadeInDown');
+		$('header').addClass('animated fadeOutUp');
+	} else {
+		$('body').removeClass('scrolled');
+		$('header').removeClass('animated fadeInDown');
+		$('header').removeClass('animated fadeOutUp');
+	}
+}
+
+/* open modal windows */
+
+/* fast see */
+$('.main-product-card__label__buttons a:first-child').on('click', function(event) {
+	event.preventDefault();
+	$.fancybox.open('#fast-buy');
+	setTimeout(function() {
+		$('.slick-next').click();
+	}, 100);
+});
+
+/* fast buy */
+$('.main-product-card__label__buttons a:last-child').on('click', function(event) {
+	event.preventDefault();
+	$.fancybox.open('#modal-order-one-click');
+});
+
+
+/* btn close modal */
+$('.btn__close-modal').click(function(event) {
+	event.preventDefault();
+	$.fancybox.close();
+});
 
 });
