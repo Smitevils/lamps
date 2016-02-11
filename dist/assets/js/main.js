@@ -56,6 +56,22 @@ $('.basket-popup-close-btn').on('click', function(e) {
 	}
 });
 
+// show sign in popup
+
+var sip = $('.sign-in-popup'); //sign-in-popup
+
+$('.user-sign-in').hover(function() {
+	sip.addClass('open');
+}, function() {
+	sip.removeClass('open');
+});
+
+sip.hover(function() {
+	sip.addClass('open');
+}, function() {
+	sip.removeClass('open');
+});
+
 // show basket popup
 
 var bmp = $('.basket-main-popup'); //basket_main_popup
@@ -650,5 +666,33 @@ $('.btn__close-modal').click(function(event) {
 	event.preventDefault();
 	$.fancybox.close();
 });
+
+/* main popup signin */
+
+function checkTabSignIn(tab_number) {
+	$('.sign-in-menu__tab').removeClass('active');
+	$('.sign-in-menu__tab-content').removeClass('open');
+	$('.sign-in-menu__tab[data-tab="' + tab_number + '"]').addClass('active');
+	$('.sign-in-menu__tab-content[data-tab-content="' + tab_number + '"]').addClass('open');
+}
+// tabs
+$('.sign-in-menu__tab').click(function(event) {
+	event.preventDefault();
+	tab_number = $(this).data('tab');
+	checkTabSignIn(tab_number);
+});
+
+
+/* плавный скролл к обьекту */
+
+$('.scroll-to').click(function(e){
+	e.preventDefault();
+	var href = $(this).attr('href');
+	var offsetTop = $(href).offset().top;
+
+	$('html, body').stop().animate({scrollTop: offsetTop - 50}, 2000);
+	e.preventDefault();
+});
+
 
 });

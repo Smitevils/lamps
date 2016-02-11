@@ -1195,7 +1195,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="#">
+						<a href="installation.html">
 							<div class="nav-text-wrap">
 								<span data-hover="установка">установка</span>
 							</div>
@@ -1228,7 +1228,7 @@
 			<div class="user-nav">
 				<ul class="user-nav-list">
 					<li>
-						<a href="#">
+						<a href="#" class="user-sign-in">
 							<i class="icon i-basket">
 								<svg viewBox="0 0 409.165 409.164">
 									<use xlink:href="#user-svg"></use>
@@ -1250,6 +1250,86 @@
 					</li>
 				</ul>
 				<div class="search-btn"></div>
+				<!-- sign in popup -->
+				<div class="sign-in-popup">
+					<ul class="sign-in-menu">
+						<li>
+							<p class="sign-in-menu__tab active" data-tab="1">ВХОД</p>
+						</li>
+						<li>
+							<p class="sign-in-menu__tab" data-tab="2">РЕГИСТРАЦИЯ</p>
+						</li>
+					</ul>
+					<div class="sign-in-menu__tab-content open" data-tab-content="1">
+						<form action="#">
+							<div class="grid-row modal__row">
+								<div class="division-1">
+									<p class="modal__input-lable">E-mail</p>
+								</div>
+							</div>
+							<div class="grid-row modal__row">
+								<div class="division-1">
+									<input type="text" placeholder="example@mail.com">
+								</div>
+							</div>
+							<div class="grid-row modal__row">
+								<div class="division-1">
+									<p class="modal__input-lable">Пароль</p>
+								</div>
+							</div>
+							<div class="grid-row modal__row">
+								<div class="division-1">
+									<input type="text" placeholder="******">
+								</div>
+							</div>
+							<div class="grid-row modal__row">
+								<div class="division-1">
+									<a href="#" class="sign-in-menu__link" onclick="$.fancybox($('#modal-forgot-password'));">забыли пароль?</a>
+								</div>
+							</div>
+							<div class="grid-row modal__row">
+								<div class="division-1">
+									<input type="submit" class="btn btn__pink-2-pink">
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="sign-in-menu__tab-content" data-tab-content="2">
+						<form action="#">
+							<div class="grid-row modal__row">
+								<div class="division-1">
+									<p class="modal__input-lable">E-mail</p>
+								</div>
+							</div>
+							<div class="grid-row modal__row">
+								<div class="division-1">
+									<input type="text" placeholder="example@mail.com">
+								</div>
+							</div>
+							<div class="grid-row modal__row">
+								<div class="division-1">
+									<p class="modal__input-lable">Пароль</p>
+								</div>
+							</div>
+							<div class="grid-row modal__row">
+								<div class="division-1">
+									<input type="text" placeholder="******">
+								</div>
+							</div>
+							<div class="grid-row modal__row">
+								<div class="division-1">
+									<input type="checkbox" id="rules"><label for="rules">Я согласен с <a href="#">правилами и условиями</a>
+								</div>
+							</div>
+							<div class="grid-row modal__row">
+								<div class="division-1">
+									<input type="submit" class="btn btn__pink-2-pink" value="Зарегистрироваться">
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				<!-- /sign in popup -->
 				<!-- basket popup -->
 				<div class="basket-main-popup">
 					<!-- slider -->
@@ -1508,24 +1588,26 @@
 						</div>
 						<div class="get-project__container__text-block__text">
 							<p>
-								Сотрудники нашей компании осуществляют подбор  светильников 
-								под дизайн проекты жилых и коммерческих помещений, используя как готовые визуализации и схемы расстановки, так и самостоятельно производя расчет 
+								Сотрудники нашей компании осуществляют подбор  светильников
+								под дизайн проекты жилых и коммерческих помещений, используя как готовые визуализации и схемы расстановки, так и самостоятельно производя расчет
 								освещенности, предлагают к  установке  светильники , которые лучше всего удовлетворяют  техническим требованиям, требованиям дизайна и функционала.
 							</p>
 							<p>
-								Мы укажем на недостаток или избыток освещенности в готовом проекте, дадим рекомендации по расстановке и выбору тех или иных осветительных приборов. 
+								Мы укажем на недостаток или избыток освещенности в готовом проекте, дадим рекомендации по расстановке и выбору тех или иных осветительных приборов.
 							</p>
 							<p>
 								Сотрудники нашей фирмы — это специалисты со стажем в области технического и декоративного освещения более пяти лет.
 							</p>
 						</div>
-						<a href="article.html" class="btn btn__whote-2-black">РАССЧИТАТЬ ПРОЕКТ</a>
+						<!-- href для скролла к id -->
+						<a href="#get-project-form" class="btn btn__whote-2-black scroll-to">РАССЧИТАТЬ ПРОЕКТ</a>
 					</div>
 				</div>
 				<img src="assets/img/other/get-project.jpg" alt="Рассчитать проект">
 			</div>
 		</div>
-		<div class="page-container get-project__form">
+		<!-- id для плавного скролла - не убирать -->
+		<div id="get-project-form" class="page-container get-project__form">
 			<form action="#" method="post">
 				<h5>Пожалуйста, заполните форму обратной связи:</h5>
 				<div class="grid-row get-project__upload-file__wrap__left">
@@ -1605,16 +1687,10 @@
 							<h4>LIGHT ONLINE</h4>
 						</li>
 						<li class="footer-li-list">
-							<a href="#">Доставка и оплата</a>
+							<a href="delivery.html">Доставка и оплата</a>
 						</li>
 						<li class="footer-li-list">
-							<a href="#">Установка</a>
-						</li>
-						<li class="footer-li-list">
-							<a href="#">Инфо-центр</a>
-						</li>
-						<li class="footer-li-list">
-							<a href="#">Контакты</a>
+							<a href="installation.html">Установка</a>
 						</li>
 					</ul>
 				</li>
@@ -1625,13 +1701,13 @@
 							<h4>КАТАЛОГ</h4>
 						</li>
 						<li class="footer-li-list">
-							<a href="#">Basic</a>
+							<a href="categories.html">Basic</a>
 						</li>
 						<li class="footer-li-list">
-							<a href="#">Premium</a>
+							<a href="categories.html">Premium</a>
 						</li>
 						<li class="footer-li-list">
-							<a href="#">Professional</a>
+							<a href="categories.html">Professional</a>
 						</li>
 					</ul>
 				</li>
@@ -1639,16 +1715,13 @@
 					<!-- list -->
 					<ul class="footer-ul-list">
 						<li class="footer-li-list">
-							<h4>ПОМОЩЬ</h4>
+							<h4>О НАС</h4>
 						</li>
 						<li class="footer-li-list">
-							<a href="#">Статус заказа</a>
+							<a href="about-company.html">О компании</a>
 						</li>
 						<li class="footer-li-list">
-							<a href="#">Возврат товара</a>
-						</li>
-						<li class="footer-li-list">
-							<a href="#">FAQ</a>
+							<a href="contacts.html">Контакты</a>
 						</li>
 					</ul>
 				</li>
@@ -1869,6 +1942,31 @@
 					<a href="basket.html" class="btn btn btn__pink-2-pink">ПЕРЕЙТИ К КОРЗИНЕ</a>
 				</div>
 			</div>
+		</div>
+	</div>
+	
+	<div class="modal-window" id="modal-forgot-password">
+		<div class="modal-forgot-password__container">
+			<form action="#">
+				<div class="modal-forgot-password__title">
+					Восстановление пароля
+				</div>
+				<div class="grid-row modal__row">
+					<div class="division-1">
+						<p class="modal__input-lable">E-mail</p>
+					</div>
+				</div>
+				<div class="grid-row modal__row">
+					<div class="division-1">
+						<input type="text" placeholder="example@mail.com">
+					</div>
+				</div>
+				<div class="grid-row modal__row">
+					<div class="division-1">
+						<input type="submit" class="btn btn__pink-2-pink" value="Запросить пароль">
+					</div>
+				</div>
+			</fofm>
 		</div>
 	</div>
 	<!-- Scripts -->

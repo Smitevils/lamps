@@ -82,7 +82,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="installation.html">
 						<div class="nav-text-wrap">
 							<span data-hover="установка">установка</span>
 						</div>
@@ -115,7 +115,7 @@
 		<div class="user-nav">
 			<ul class="user-nav-list">
 				<li>
-					<a href="#">
+					<a href="#" class="user-sign-in">
 						<i class="icon i-basket">
 							<svg viewBox="0 0 409.165 409.164">
 								<use xlink:href="#user-svg"></use>
@@ -137,6 +137,86 @@
 				</li>
 			</ul>
 			<div class="search-btn"></div>
+			<!-- sign in popup -->
+			<div class="sign-in-popup">
+				<ul class="sign-in-menu">
+					<li>
+						<p class="sign-in-menu__tab active" data-tab="1">ВХОД</p>
+					</li>
+					<li>
+						<p class="sign-in-menu__tab" data-tab="2">РЕГИСТРАЦИЯ</p>
+					</li>
+				</ul>
+				<div class="sign-in-menu__tab-content open" data-tab-content="1">
+					<form action="#">
+						<div class="grid-row modal__row">
+							<div class="division-1">
+								<p class="modal__input-lable">E-mail</p>
+							</div>
+						</div>
+						<div class="grid-row modal__row">
+							<div class="division-1">
+								<input type="text" placeholder="example@mail.com">
+							</div>
+						</div>
+						<div class="grid-row modal__row">
+							<div class="division-1">
+								<p class="modal__input-lable">Пароль</p>
+							</div>
+						</div>
+						<div class="grid-row modal__row">
+							<div class="division-1">
+								<input type="text" placeholder="******">
+							</div>
+						</div>
+						<div class="grid-row modal__row">
+							<div class="division-1">
+								<a href="#" class="sign-in-menu__link" onclick="$.fancybox($('#modal-forgot-password'));">забыли пароль?</a>
+							</div>
+						</div>
+						<div class="grid-row modal__row">
+							<div class="division-1">
+								<input type="submit" class="btn btn__pink-2-pink">
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="sign-in-menu__tab-content" data-tab-content="2">
+					<form action="#">
+						<div class="grid-row modal__row">
+							<div class="division-1">
+								<p class="modal__input-lable">E-mail</p>
+							</div>
+						</div>
+						<div class="grid-row modal__row">
+							<div class="division-1">
+								<input type="text" placeholder="example@mail.com">
+							</div>
+						</div>
+						<div class="grid-row modal__row">
+							<div class="division-1">
+								<p class="modal__input-lable">Пароль</p>
+							</div>
+						</div>
+						<div class="grid-row modal__row">
+							<div class="division-1">
+								<input type="text" placeholder="******">
+							</div>
+						</div>
+						<div class="grid-row modal__row">
+							<div class="division-1">
+								<input type="checkbox" id="rules"><label for="rules">Я согласен с <a href="#">правилами и условиями</a>
+							</div>
+						</div>
+						<div class="grid-row modal__row">
+							<div class="division-1">
+								<input type="submit" class="btn btn__pink-2-pink" value="Зарегистрироваться">
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<!-- /sign in popup -->
 			<!-- basket popup -->
 			<div class="basket-main-popup">
 				<!-- slider -->
