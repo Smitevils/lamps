@@ -249,7 +249,7 @@ textarea {
 	min-height: 60px;
 }
 
-input[type="text"], textarea {
+input[type="text"], input[type="tel"], input[type="email"], input[type="password"], textarea {
 	@include Transition-All-03s;
 	outline: none;
 	border: 1px solid $font-color-6;
@@ -332,13 +332,16 @@ input[type="file"] {
 	input {
 		border: none;
 		border-bottom: 2px solid #000;
-		outline: none;
+		outline: none!important;
 		font-size: 70px;
 		color: $font-color-3;
 		padding: 20px 100px 20px 0px;
 		font-weight: 400;
 		background: url(../img/svg/search-bg.svg) no-repeat center right;
 		background-size: 80px;
+	}
+	input:hover, input:focus {
+		border: 0; border-bottom: 2px solid #000;
 	}
 	input + label {
 		position: absolute;
@@ -1154,12 +1157,12 @@ header {
 	}
 }
 
-.basket-main-popup__slider .slick-prev {
+.basket-main-popup .slick-prev {
 	background: url(../img/icons/slider-arrow-up.png);
 	background-repeat: no-repeat;
 	background-position: center;
 }
-.basket-main-popup__slider .slick-next {
+.basket-main-popup .slick-next {
 	background: url(../img/icons/slider-arrow-down.png);
 	background-repeat: no-repeat;
 	background-position: center;
@@ -2078,7 +2081,29 @@ input {outline: none;}
 .blog__slide__content {
 	//display: inline-block;
 	width: 100%; height: 410px; background-size: cover;
-	@include Display-Flex-Center;
+	@include Display-Flex-Center; position: relative;
+
+}
+
+.blog__slide__content .social-share {
+	position: absolute;
+	bottom: 10px; right: 40px;
+}
+.blog__slide__content .social-share svg {fill: #fff; @include Transition-All-03s;}
+.blog__slide__content .social-share .social-share__container:hover  {
+	svg {fill: #769a5a;}
+	span {
+		color: #769a5a;
+	}
+	.icon:after {
+		background-color: #769a5a;
+	}
+}
+.blog__slide__content .social-share a {
+	color: #fff;
+}
+.blog__slide__content .social-share__container .icon:after {
+	background-color: #fff;
 }
 
 .blog__slide__info {
