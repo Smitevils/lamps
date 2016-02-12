@@ -36,6 +36,8 @@
 	<link rel="stylesheet" href="assets/modules/nouislider/nouislider.min.css" />
 	<!-- selectize -->
 	<link rel="stylesheet" href="assets/modules/fancyselect/fancySelect.css" />
+	<!-- MaterialScroollTop -->
+	<link rel="stylesheet" href="assets/modules/MaterialScroollTop/material-scrolltop.css" />
 </head>
 <body>
 	<div class="svg-sprites">
@@ -1638,7 +1640,7 @@
 						<div class="grid-row ordering__content__row-padding">
 							<div class="division-1">
 								<span class="input-label">Покупатель</span>
-								<input type="radio" name="buyer" id="buyer-method-1"><label class="buyer-individual choise-type-of-buyer" for="buyer-method-1">Физическое лицо</label>
+								<input type="radio" name="buyer" id="buyer-method-1" checked="check"><label class="buyer-individual choise-type-of-buyer" for="buyer-method-1">Физическое лицо</label>
 								<input type="radio" name="buyer" id="buyer-method-2"><label class="buyer-legal choise-type-of-buyer" for="buyer-method-2">Юридическое лицо</label>
 							</div>
 						</div>
@@ -1655,10 +1657,25 @@
 								<input type="radio" name="payment" id="payment-method-3"><label for="payment-method-3">Электронные платежи</label>
 							</div>
 						</div>
+						<div class="grid-row ordering__content__row-padding">
+							<div class="division-1">
+								<div class="content__title__small">
+									<h2>Доставка</h2>
+								</div>
+							</div>
+							<div class="grid-row ordering__content__row-padding">
+							<div class="division-1">
+									<span class="input-label">Способ доставки</span>
+									<input type="radio" name="delivery-individual" class="delivery-method" id="delivery-individual-method-1"><label for="delivery-individual-method-1">Доставка курьером</label>
+									<input type="radio" name="delivery-individual" class="delivery-method" id="delivery-individual-method-pickup"><label for="delivery-individual-method-pickup">Самовывоз</label>
+									<input type="radio" name="delivery-individual" class="delivery-method" id="delivery-individual-method-3"><label for="delivery-individual-method-3">Доставка в регионы</label>
+								</div>
+							</div>
+						</div>
 						<!-- /select type payment -->
 						<!-- text delivery / delivery - 1 -->
 						<div class="ordering__content__wrap individual-delivery">
-							<div class="content__title__small">
+							<!-- <div class="content__title__small">
 								<h2>Доставка</h2>
 							</div>
 							<div class="grid-row ordering__content__row-padding">
@@ -1668,7 +1685,7 @@
 									<input type="radio" name="delivery-individual" id="delivery-individual-method-2"><label for="delivery-individual-method-2">Самовывоз</label>
 									<input type="radio" name="delivery-individual" id="delivery-individual-method-3"><label for="delivery-individual-method-3">Доставка в регионы</label>
 								</div>
-							</div>
+							</div> -->
 							<div class="grid-row ordering__content__row-padding">
 								<div class="division-2">
 									<p>
@@ -1684,7 +1701,7 @@
 										<input type="tel" class="input-w300px" placeholder="+7 (777) 777-77-77">
 									</p>
 								</div>
-								<div class="division-2">
+								<div class="division-2 adress-block">
 									<div class="grid-row">
 										<div class="division-30per">
 											<p>
@@ -1718,7 +1735,7 @@
 						<!-- /text delivery -->
 						<!-- text delivery / delivery - 2 -->
 						<div class="ordering__content__wrap legal-delivery">
-							<div class="content__title__small">
+							<!-- <div class="content__title__small">
 								<h2>Доставка</h2>
 							</div>
 							<div class="division-1">
@@ -1726,7 +1743,7 @@
 								<input type="radio" name="delivery-legal" id="delivery-legal-method-1"><label for="delivery-legal-method-1">Доставка курьером</label>
 								<input type="radio" name="delivery-legal" id="delivery-legal-method-2"><label for="delivery-legal-method-2">Самовывоз</label>
 								<input type="radio" name="delivery-legal" id="delivery-legal-method-3"><label for="delivery-legal-method-3">Доставка в регионы</label>
-							</div>
+							</div>-->
 							<div class="grid-row ordering__content__row-padding">
 								<div class="division-1">
 									<input type="checkbox" name="load-file-checkbox" id="load-file-checkbox"><label for="load-file-checkbox">Загрузить реквизиты файлом</label>
@@ -1773,7 +1790,7 @@
 											<input type="email" class="input-w300px" placeholder="Иванов Александр Петрович">
 										</p>
 									</div>
-									<div class="division-2">
+									<div class="division-2 adress-block">
 										<div class="grid-row">
 											<div class="division-30per">
 												<p>
@@ -1918,6 +1935,8 @@
 			</ul>
 		</div>
 	</footer>
+	<!-- material-scrolltop button -->
+	<button class="material-scrolltop" type="button"></button>
 	<div class="modal-window" id="modal-1">
 		<h1>Привет!</h1>
 		<p>Я модальное окно</p>
@@ -2136,6 +2155,12 @@
 			</fofm>
 		</div>
 	</div>
+	
+	<div class="modal-window" id="modal-img-full">
+		<div class="modal-img-full__container">
+			<img src="" alt="Превью">
+		</div>
+	</div>
 	<!-- Scripts -->
 	<!-- Add jQuery library -->
 	<!-- <script type="text/javascript" src="assets/js/jquery-1.11.3.min.js"></script> -->
@@ -2169,7 +2194,7 @@
 	<!-- svg4everybody / для подключения svg через use для IE -->
 	<script type="text/javascript" src="assets/js/svg4everybody.js"></script>
 	
-	<!-- flexie.min.js 
+	<!-- flexie.min.js
 	<script type="text/javascript" src="assets/js/flexie.min.js"></script>-->
 	
 	<!-- Custom ScrollBar -->
@@ -2186,6 +2211,12 @@
 	
 	<!-- selectize -->
 	<script type="text/javascript" src="assets/modules/fancyselect/fancySelect.js"></script>
+	
+	<!-- jQuery-Mask -->
+	<script type="text/javascript" src="assets/modules/jQuery-Mask/jquery.mask.min.js"></script>
+	
+	<!-- MaterialScroollTop -->
+	<script type="text/javascript" src="assets/modules/MaterialScroollTop/material-scrolltop.js"></script>
 	
 	<!-- Main JS -->
 	<script type="text/javascript" src="assets/js/main.js"></script>

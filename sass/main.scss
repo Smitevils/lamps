@@ -876,7 +876,7 @@ header {
 	fill: $bg-color-3;
 }
 .i-category-list {
-	width: 70px; height: 70px;
+	width: 50px; height: 50px;
 	fill: $bg-color-11;
 }
 
@@ -1767,6 +1767,7 @@ input {outline: none;}
 	& > .grid-row:first-child {
 		padding: 30px 0;
 		//
+		.division-3 {text-align: center;}
 		.division-3:first-child {text-align: left;}
 		.division-3:last-child {text-align: right;}
 	}
@@ -1820,7 +1821,8 @@ input {outline: none;}
 		padding: 50px 0;
 		vertical-align: top;
 		//
-		.tabs__content-item {width: 100%; min-height: 600px;}
+		.tabs__content-item {width: 100%; min-height: 600px; display: none;}
+		.tabs__content-item.open {display: block;}
 	}
 }
 
@@ -1982,7 +1984,7 @@ input {outline: none;}
 }
 
 .categories-catalog__item__content__box {
-	text-align: center; max-width: 140px; overflow: hidden;
+	text-align: center; max-width: 180px; min-width: 180px; overflow: hidden;
 }
 
 .categories-catalog__item__content__box__slider {
@@ -2007,7 +2009,7 @@ input {outline: none;}
 
 .categories-catalog__item__content__box__text {
 	font-weight: 600; padding: 20px 0; position: relative;
-	color: $font-color-1; letter-spacing: 2px;
+	color: $font-color-1; letter-spacing: 2px; text-transform: uppercase;
 	@include Transition-All-03s;
 	//
 	p {margin: 0; padding: 0;}
@@ -2379,7 +2381,7 @@ input {outline: none;}
 		text-align: center;
 		background: transparent;
 		border: none;
-		width: 50px;
+		width: 22px;
 		font-weight: 800;
 		font-size: 14px;
 		//
@@ -2510,7 +2512,7 @@ input {outline: none;}
 	display: inline-block; margin: 0 20px;
 }
 
-.ordering__content__upload-file {margin-left: 20px;}
+.ordering__content__upload-file {margin-left: 20px; display: none;}
 
 // get project
 
@@ -2791,6 +2793,7 @@ input {outline: none;}
 	//
 	.catalog__goods-cards {margin-left: -14px; margin-right: -14px;}
 	//
+	.division-1 {text-align: center; padding-bottom: 20px;}
 	.division-4 {text-align: center; padding-bottom: 20px;}
 	// .division-4:nth-of-type(4n) {
 	// 	text-align: right;
@@ -2822,6 +2825,15 @@ input {outline: none;}
 	width: 448px; height: 368px;
 	border: 1px solid $bg-color-15;
 	background: $bg-color-4;
+	position: relative;
+}
+
+.card__galery__btn-full-photo {
+	display: block; width: 28px; height: 28px;
+	background: url(../img/icons/loupe.png) no-repeat center;
+	position: absolute;
+	top: 10px; left: 10px; z-index: 100;
+	cursor: pointer;
 }
 
 .galery-slider-for-wrap {float: left; /*width: 200px;*/ width: 376px; height: 368px; overflow: hidden;}
@@ -2892,7 +2904,15 @@ input {outline: none;}
 /****/
 
 .card__info-container {
+	position: relative;
+}
 
+.print-btn {
+	background: url(../img/icons/print.png) no-repeat center;
+	background-size: cover;
+	width: 45px; height: 45px;
+	position: absolute; bottom: 0px; right: 20px;
+	cursor: pointer;
 }
 
 .card__info-container__name-title {
@@ -2953,7 +2973,7 @@ input {outline: none;}
 }
 
 .select-color-module__color-circle {
-	width: 22px; height: 22px;
+	width: 18px; height: 18px;
 	background-color: transparent;
 	border: 2px solid transparent;
 	border-radius: 50%;
@@ -2970,8 +2990,8 @@ input {outline: none;}
 }
 
 .card-buttons-wrap {
-	padding: 20px 40px;
-	text-align: center;
+	padding: 20px 40px 20px 0;
+	text-align: left;
 	//
 	.btn + .btn {margin-left: 20px;}
 }
@@ -3021,6 +3041,10 @@ input {outline: none;}
 }
 .fancybox-overlay {
 	background: rgba(255,255,255,0.9)!important;
+}
+
+.fancybox-opened .fancybox-skin {
+	box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3)!important;
 }
 
 .modal-order-one-click__container {
@@ -3124,8 +3148,48 @@ input {outline: none;}
 
 .modal-window .modal-forgot-password__container .modal__row {text-align: center;}
 
+
+// modal img - full page
+
+.modal-img-full__container {
+	position: relative;
+	//
+	img {
+		width: auto; height: auto; min-width: 300px; min-height: 300px;
+		object-fit: cover;
+	}
+}
+
 //
 
+/* catalog banner */
 
+.catalog-banner {
+	//display: inline-block;
+	position: relative;
+	width: calc(100% - 30px;); height: 144px;
+	background: url(../img/other/banner.jpg) no-repeat center #fff;
+	background-size: cover;
+	box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	//
+	.btn {
+		position: absolute;
+		bottom: 30px; right: 20px;
+	}
+}
 
-/* */
+.catalog-banner__title {
+	text-transform: uppercase;
+	font-size: 30px;
+	font-weight: 600;
+	letter-spacing: 2px;
+	//
+	span {color: $font-color-9;}
+}
+
+/*********************************/
+
+@import 'adaptive';

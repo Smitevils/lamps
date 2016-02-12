@@ -1,0 +1,14 @@
+@media print { /* Стиль для печати */
+    body {
+     /*font-family: Times, 'Times New Roman', serif;*/  color: #000; /* Шрифт с засечками */
+     transform: scale(0.9)
+    }
+    h1, h2, h3, h4, h5, h6, p, a {
+        color: #000; /* Черный цвет текста */
+    }
+    header {display: none;}
+    footer {display: none;}
+    .card-buttons-wrap {display: none;}
+    .card__may-like {display: none;}
+    .card__info-text p, .card__info-table, .card__info-container__name-title, .card__info-container__availability {font-size: 20px; color: #000;}
+}

@@ -244,7 +244,7 @@ $('.btn__main-filter-search').on('click', function(event) {
 });
 
 /* tabtab.js */
-var active_tab = $('.animate-tabs .tabs').data('active-tab'); // search active tab
+/*var active_tab = $('.animate-tabs .tabs').data('active-tab'); // search active tab
 $('.animate-tabs .tabs').tabtab({
 	tabMenu: '.tabs__menu',             // direct container of the tab menu items
 	tabContent: '.tabs__content',       // direct container of the tab content items
@@ -269,8 +269,23 @@ $('.animate-tabs .tabs').tabtab({
 	scale: 1,                           // animate scale (val: 0-2)
 	rotateX: 0,                        // animate rotation (val: 0deg-360deg)
 	rotateY: 10,                         // animate Y acces rotation (val: 0deg-360deg)
-	skewY: 0,                           // animate Y skew (val: 0deg-360deg)
+	skewY: 10,                           // animate Y skew (val: 0deg-360deg)
 	skewX: 0,                           // animate X skew (val: 0deg-360deg)
+});*/
+
+/* табы в категориях */
+
+function categoryTabs(active_tab) {
+	$('.tabs__menu-item').removeClass('active');
+	$('.tabs__menu-item[data-tab="'+active_tab+'"]').addClass('active');
+	$('.tabs__content-item').removeClass('open');
+	$('.tabs__content-item[data-tab-container="'+active_tab+'"]').addClass('open');
+}
+
+$('.tabs__menu-item').click(function(event) {
+	event.preventDefault();
+	var active_tab = $(this).data('tab');
+	categoryTabs(active_tab);
 });
 
 // easter egg
@@ -413,6 +428,14 @@ $('#load-file-checkbox').click(function(event) {
 	} else {
 		$('.ordering__content__upload-file, .name-of-file').hide();
 		$('.hide-fields-for-legal').show();
+	}
+});
+/* если выбран чекбокс самовывоз */
+$('.delivery-method').click(function(event) {
+	if ($('#delivery-individual-method-pickup').is(':checked')) {
+		$('.adress-block').hide();
+	} else {
+		$('.adress-block').show();
 	}
 });
 
@@ -694,5 +717,24 @@ $('.scroll-to').click(function(e){
 	e.preventDefault();
 });
 
+/* маски на инпуты */
+$('[type="tel"]').mask('+7 (000) 000-00-00');
+
+/* скролл к верху страницы */
+$('body').materialScrollTop();
+
+/* открываем фото на всю страницу */
+$('.card__galery__btn-full-photo').click(function(e) {
+	e.preventDefault();
+	var imgpath = $('.galery-slider-for .slick-slide.slick-current.slick-active img').attr('src');
+	$('#modal-img-full img').attr('src', imgpath);
+	$.fancybox.open('#modal-img-full');
+});
+
+// печать страницы
+$('.print-btn').click(function(e) {
+	e.preventDefault();
+	window.print();
+});
 
 });
