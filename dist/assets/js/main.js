@@ -113,9 +113,27 @@ $('.search-window__close-wrap').click(function(event) {
 
 
 /**/
-$('[data-category-main="1"]').hover(function() {
+// $('[data-category-main="1"]').hover(function() {
+// 	$('[data-category-main-menu="1"]').addClass('open');
+// 	$('[data-category-main="2"], [data-category-main="3"]').addClass('hover');
+// }, function() {
+// 	if ($('[data-category-main-menu="1"]').is(':hover')) {
+// 		return;
+// 	} else {
+// 		$('[data-category-main-menu="1"]').removeClass('open');
+// 		$('[data-category-main]').removeClass('hover');
+// 	}
+// });
+
+/*****************/
+
+$('[data-category-main="1"]').click(function(event) {
 	$('[data-category-main-menu="1"]').addClass('open');
 	$('[data-category-main="2"], [data-category-main="3"]').addClass('hover');
+});
+
+$('[data-category-main="1"]').hover(function() {
+	//
 }, function() {
 	if ($('[data-category-main-menu="1"]').is(':hover')) {
 		return;
@@ -124,6 +142,8 @@ $('[data-category-main="1"]').hover(function() {
 		$('[data-category-main]').removeClass('hover');
 	}
 });
+
+/************/
 
 $('[data-category-main-menu="1"]').hover(function() {
 	return;
@@ -136,9 +156,26 @@ $('[data-category-main-menu="1"]').hover(function() {
 	}
 });
 /**/
-$('[data-category-main="2"]').hover(function() {
+// $('[data-category-main="2"]').hover(function() {
+// 	$('[data-category-main-menu="2"]').addClass('open');
+// 	$('[data-category-main="1"], [data-category-main="3"]').addClass('hover');
+// }, function() {
+// 	if ($('[data-category-main-menu="2"]').is(':hover')) {
+// 		return;
+// 	} else {
+// 		$('[data-category-main-menu="2"]').removeClass('open');
+// 		$('[data-category-main]').removeClass('hover');
+// 	}
+// });
+
+$('[data-category-main="2"]').click(function(event) {
 	$('[data-category-main-menu="2"]').addClass('open');
 	$('[data-category-main="1"], [data-category-main="3"]').addClass('hover');
+});
+
+$('[data-category-main="2"]').hover(function() {
+	// $('[data-category-main-menu="2"]').addClass('open');
+	// $('[data-category-main="1"], [data-category-main="3"]').addClass('hover');
 }, function() {
 	if ($('[data-category-main-menu="2"]').is(':hover')) {
 		return;
@@ -159,9 +196,26 @@ $('[data-category-main-menu="2"]').hover(function() {
 	}
 });
 /**/
-$('[data-category-main="3"]').hover(function() {
+// $('[data-category-main="3"]').hover(function() {
+// 	$('[data-category-main-menu="3"]').addClass('open');
+// 	$('[data-category-main="1"], [data-category-main="2"]').addClass('hover');
+// }, function() {
+// 	if ($('[data-category-main-menu="3"]').is(':hover')) {
+// 		return;
+// 	} else {
+// 		$('[data-category-main-menu="3"]').removeClass('open');
+// 		$('[data-category-main]').removeClass('hover');
+// 	}
+// });
+
+$('[data-category-main="3"]').click(function(event) {
 	$('[data-category-main-menu="3"]').addClass('open');
 	$('[data-category-main="1"], [data-category-main="2"]').addClass('hover');
+});
+
+$('[data-category-main="3"]').hover(function() {
+	// $('[data-category-main-menu="3"]').addClass('open');
+	// $('[data-category-main="1"], [data-category-main="2"]').addClass('hover');
 }, function() {
 	if ($('[data-category-main-menu="3"]').is(':hover')) {
 		return;
@@ -244,7 +298,7 @@ $('.btn__main-filter-search').on('click', function(event) {
 });
 
 /* tabtab.js */
-/*var active_tab = $('.animate-tabs .tabs').data('active-tab'); // search active tab
+var active_tab = $('.animate-tabs .tabs').data('active-tab'); // search active tab
 $('.animate-tabs .tabs').tabtab({
 	tabMenu: '.tabs__menu',             // direct container of the tab menu items
 	tabContent: '.tabs__content',       // direct container of the tab content items
@@ -269,9 +323,9 @@ $('.animate-tabs .tabs').tabtab({
 	scale: 1,                           // animate scale (val: 0-2)
 	rotateX: 0,                        // animate rotation (val: 0deg-360deg)
 	rotateY: 10,                         // animate Y acces rotation (val: 0deg-360deg)
-	skewY: 10,                           // animate Y skew (val: 0deg-360deg)
+	skewY: 0,                           // animate Y skew (val: 0deg-360deg)
 	skewX: 0,                           // animate X skew (val: 0deg-360deg)
-});*/
+});
 
 /* табы в категориях */
 
