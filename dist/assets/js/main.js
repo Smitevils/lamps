@@ -44,6 +44,20 @@ $('#basket-popup-slider').slick({
 	nextArrow: $('.slick-next')
 });
 
+// card - other goods of this category
+$('.slider__goods-of-this-cathegory__container').slick({
+	vertical: true,
+	infinite: true,
+	arrows: true,
+	swipe: false,
+	slidesToShow: 3,
+	slidesToScroll: 1,
+	adaptiveHeight: true,
+	speed: 100
+	//prevArrow: $('.slick-prev'),
+	//nextArrow: $('.slider__goods-of-this-cathegory__next-btn')
+});
+
 // remove slide
 
 $('.basket-popup-close-btn').on('click', function(e) {
@@ -54,6 +68,22 @@ $('.basket-popup-close-btn').on('click', function(e) {
 		if (slideIndex !== 0){
 		slideIndex--;
 	}
+});
+
+// show user profile popup
+
+var upp = $('.user-profile-popup'); //sign-in-popup
+
+$('.user-profile').hover(function() {
+	upp.addClass('open');
+}, function() {
+	upp.removeClass('open');
+});
+
+upp.hover(function() {
+	upp.addClass('open');
+}, function() {
+	upp.removeClass('open');
 });
 
 // show sign in popup
@@ -353,6 +383,12 @@ $('.tabs__menu-item').click(function(event) {
 		$('.i-truck-car').css('margin-top', (x + "px"));
 	}, 5);
 });*/
+
+// konami easter egg
+
+var easter_egg = new Konami();
+easter_egg.code = function() { alert('Konami code!'); }
+easter_egg.load();
 
 // blog slider
 
@@ -789,6 +825,18 @@ $('.card__galery__btn-full-photo').click(function(e) {
 $('.print-btn').click(function(e) {
 	e.preventDefault();
 	window.print();
+});
+
+// редактирование и сохранение пользовательских данных
+$(document).on('click', '.user-info__edit-user-block', function(event) {
+	event.preventDefault();
+	$(this).parents('.user-info__block').addClass('editable');
+	$(this).parents('.user-info__block').removeClass('static');
+});
+$(document).on('click', '.user-info__save-user-block', function(event) {
+	event.preventDefault();
+	$(this).parents('.user-info__block').removeClass('editable');
+	$(this).parents('.user-info__block').addClass('static');
 });
 
 });
