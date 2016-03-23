@@ -154,13 +154,19 @@ $('.search-window__close-wrap').click(function(event) {
 // 		$('[data-category-main]').removeClass('hover');
 // 	}
 // });
+var windowWidth = $(document).width();
+var windowWidth_1 = 1024;
 
-/*****************/
-
-$('[data-category-main="1"]').click(function(event) {
-	$('[data-category-main-menu="1"]').addClass('open');
-	$('[data-category-main="2"], [data-category-main="3"]').addClass('hover');
+$(window).resize(function(event) {
+	windowWidth = $(document).width();
 });
+/*****************/
+if (windowWidth > windowWidth_1) {
+	$('[data-category-main="1"]').click(function(event) {
+		$('[data-category-main-menu="1"]').addClass('open');
+		$('[data-category-main="2"], [data-category-main="3"]').addClass('hover');
+	});
+};
 
 $('[data-category-main="1"]').hover(function() {
 	//
@@ -197,11 +203,12 @@ $('[data-category-main-menu="1"]').hover(function() {
 // 		$('[data-category-main]').removeClass('hover');
 // 	}
 // });
-
-$('[data-category-main="2"]').click(function(event) {
-	$('[data-category-main-menu="2"]').addClass('open');
-	$('[data-category-main="1"], [data-category-main="3"]').addClass('hover');
-});
+if (windowWidth > windowWidth_1) {
+	$('[data-category-main="2"]').click(function(event) {
+		$('[data-category-main-menu="2"]').addClass('open');
+		$('[data-category-main="1"], [data-category-main="3"]').addClass('hover');
+	});
+}
 
 $('[data-category-main="2"]').hover(function() {
 	// $('[data-category-main-menu="2"]').addClass('open');
@@ -238,10 +245,12 @@ $('[data-category-main-menu="2"]').hover(function() {
 // 	}
 // });
 
-$('[data-category-main="3"]').click(function(event) {
-	$('[data-category-main-menu="3"]').addClass('open');
-	$('[data-category-main="1"], [data-category-main="2"]').addClass('hover');
-});
+if (windowWidth > windowWidth_1) {
+	$('[data-category-main="3"]').click(function(event) {
+		$('[data-category-main-menu="3"]').addClass('open');
+		$('[data-category-main="1"], [data-category-main="2"]').addClass('hover');
+	});
+}
 
 $('[data-category-main="3"]').hover(function() {
 	// $('[data-category-main-menu="3"]').addClass('open');
@@ -288,7 +297,31 @@ $('.novelty-slider').slick({
 	slidesToShow: 4,
 	slidesToScroll: 4,
 	prevArrow: '<button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="display: block;"></button>',
-	nextArrow: '<button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;"></button>'
+	nextArrow: '<button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;"></button>',
+	responsive: [
+	    {
+	      breakpoint: 1100,
+	      settings: {
+	        slidesToShow: 3,
+	        slidesToScroll: 3,
+	        infinite: true,
+	        dots: false,
+	        prevArrow: '<button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="display: block;"></button>',
+			nextArrow: '<button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;"></button>'
+	      }
+	    },
+	    {
+	      breakpoint: 1000,
+	      settings: {
+	        slidesToShow: 2,
+	        slidesToScroll: 2,
+	        infinite: true,
+	        dots: false,
+	        prevArrow: '<button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="display: block;"></button>',
+			nextArrow: '<button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;"></button>'
+	      }
+	    }
+    ]
 });
 
 $('.bestsellers-slider').slick({
@@ -297,7 +330,31 @@ $('.bestsellers-slider').slick({
 	slidesToShow: 4,
 	slidesToScroll: 4,
 	prevArrow: '<button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="display: block;"></button>',
-	nextArrow: '<button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;"></button>'
+	nextArrow: '<button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;"></button>',
+	responsive: [
+	    {
+	      breakpoint: 1100,
+	      settings: {
+	        slidesToShow: 3,
+	        slidesToScroll: 3,
+	        infinite: true,
+	        dots: false,
+	        prevArrow: '<button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="display: block;"></button>',
+			nextArrow: '<button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;"></button>'
+	      }
+	    },
+	    {
+	      breakpoint: 1000,
+	      settings: {
+	        slidesToShow: 2,
+	        slidesToScroll: 2,
+	        infinite: true,
+	        dots: false,
+	        prevArrow: '<button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="display: block;"></button>',
+			nextArrow: '<button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;"></button>'
+	      }
+	    }
+    ]
 });
 
 $('.may-like').slick({
@@ -837,6 +894,17 @@ $(document).on('click', '.user-info__save-user-block', function(event) {
 	event.preventDefault();
 	$(this).parents('.user-info__block').removeClass('editable');
 	$(this).parents('.user-info__block').addClass('static');
+});
+
+/* mobile menu button */
+
+if (windowWidth < windowWidth_1) {
+	
+}
+
+$(document).on('click', '.inner-menu__open-btn', function(event) {
+	event.preventDefault();
+	$('.navigation').toggleClass('open');
 });
 
 });

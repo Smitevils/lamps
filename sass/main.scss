@@ -742,6 +742,10 @@ header {
 	ul.user-nav-list {
 		padding: 0; margin: 0; display: inline-block; list-style: none; height: 100%; font-size: 0; vertical-align: top;
 		//
+		li:first-child {display: none;}
+		&.entered li:first-child {display: inline-block;}
+		&.entered li:nth-of-type(2) {display: none;}
+		//
 		li {
 			display: inline-block; height: 100%; font-size: 14px; vertical-align: top; position: relative;
 			//
@@ -3465,6 +3469,29 @@ input {outline: none;}
 .user-history__pagination {
 
 }
+
+/*********************************/
+
+.mobile-element {
+	display: none;
+	
+}
+
+.inner-menu__open-btn {
+	width: 38px; height: 38px; cursor: pointer;
+	background: #000;
+	float: left;
+	z-index: 200;
+}
+
+.navigation {
+	display: none;
+	//
+	&.open {
+		display: block;
+	}
+}
+
 
 /*********************************/
 

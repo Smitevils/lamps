@@ -12,3 +12,128 @@
     .card__may-like {display: none;}
     .card__info-text p, .card__info-table, .card__info-container__name-title, .card__info-container__availability {font-size: 20px; color: #000;}
 }
+
+@media screen and (max-width: 1240px) { // если меньше 1280
+    .page-container {
+        width: 980px;
+    }
+    // header
+    .user-nav {
+        //display: none;
+    }
+    .navigation ul li a {
+        padding: 0 10px;
+    }
+    .user-nav ul.user-nav-list li a {
+        padding: 0 10px;
+    }
+    //main
+    .category-main-block {
+        height: 300px;
+    }
+    .main-product-card {
+        width: 200px;
+    }
+    .category-main-block__menu, .category-main-block__menu__submenu__content {
+        min-height: 300px;
+    }
+    .category-main-block__menu_link {
+        padding: 20px 10px;
+    }
+    .category-main-block__menu_link a {
+        font-size: 10px;
+    }
+    //main filter
+    .main-filter__container {
+        .grid-row {
+            .division-30per:first-child {
+                width: 20%;
+            }
+            .division-25per {
+                width: 30%;
+            }
+        }
+    }
+    .filter-slider {
+        width: 180px;
+    }
+    .filter-row-2 {
+        padding: 0 0 20px 10px;
+    }
+    .filter-slider__label, .filter-slider__label-2 {
+        font-size: 10px;
+    }
+    // contacts
+    .contacts__map {
+        width: 100%; height: 300px;
+    }
+    // footer
+    .footer-ul-cells {width: 100%;}
+    ul.footer-ul-cells:last-child {
+        float: left; text-align: center; padding-top: 20px;
+    }
+    footer {
+        box-sizing: border-box;
+        .page-container {
+            width: calc(1000px - 56px);
+        }
+    }
+}
+
+@media screen and (max-width: 1040px) { // если меньше 140
+    .page-container {
+        width: 740px;
+    }
+    //main
+    .category-main-block {
+        height: 200px;
+    }
+    .category-main-block__text {
+        padding: 16px;
+    }
+    .category-main-block__text h2 {
+        font-size: 20px;
+    }
+    .main-filter {
+        display: none;
+    }
+    .navigation {
+        float: none;
+        height: auto;
+        position: absolute;
+        top: 38px;
+        width: 100%;
+        z-index: 100;
+        //
+        li:first-child {
+            display: none;
+        }
+        ul {
+            display: inline-block;
+            width: 100%;
+            //
+            li {
+                display: inline-block;
+                width: 100%;
+                height: 40px;
+                background-color: #f2f2f2;
+            }
+        }
+    }
+    .user-nav {
+        //display: none;
+    }
+    /* mobile elements */
+    .mobile-element {
+        display: block;
+    }
+    /**/
+    header {
+        .page-container {
+            width: 100%;
+        }
+    }
+    .navigation ul li:after {
+        display: none;
+    }
+}
