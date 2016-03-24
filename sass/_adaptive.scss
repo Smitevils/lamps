@@ -133,7 +133,7 @@
         display: none;
     }
     .slider__goods-of-this-cathegory {display: none;}
-
+    // basket
 }
 
 @media screen and (max-width: 1040px) { // если меньше 1040
@@ -255,6 +255,23 @@
     .catalog-banner {
         display: none;
     }
+    // оформление
+    .ordering__container {
+        width: 100%;
+    }
+    .ordering__content__row-padding {
+        .division-2 {
+            width: 100%;
+        }
+        .division-30per {
+            width: 100%;
+        }
+    }
+    .ordering__content__table, .content__title__small {
+        display: none;
+    }
+    .input-w300px {width: 180px;}
+    .input-label {width: 100%;}
 }
 
 @media screen and (max-width: 760px) { // если меньше 760
@@ -430,5 +447,40 @@
         .btn__pink-2-pink {
             margin-bottom: 20px;
         }
+    }
+    // basket
+    .basket__table__header {
+        display: none;
+    }
+    .basket__table__cell {display: block;}
+    .basket__table__item {
+        margin: 10px 10px 20px;
+        display: block; text-align: center;
+        box-shadow: 0 0 10px 0px rgba(0,0,0,0.5);
+        //
+        .basket__table__cell__1 {width: 100%;}
+        .basket__table__cell__2 {width: 100%;}
+        .basket__table__cell__3 {width: 100%; padding: 20px 0; text-align: center;}
+        .basket__table__cell__4 {width: 100%;}
+        .basket__table__cell__5 {width: 100%; padding: 20px 0; text-align: center;}
+        .basket__table__cell__6 {width: 100%;}
+    }
+    .basket__table__info {
+        width: 100%;
+    }
+    .basket__table__buttons {
+        text-align: center;
+        //
+        .btn__whote-2-black {
+            margin-bottom: 20px;
+        }
+        .btn__green-2-green {margin-left: 0;}
+    }
+    //
+    #order-form {
+        padding: 20px;
+    }
+    .input-w50px, .input-w120px {
+        width: 180px; margin-left: 0;
     }
 }
