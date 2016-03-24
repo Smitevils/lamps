@@ -321,6 +321,18 @@ $('.novelty-slider').slick({
 			nextArrow: '<button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;"></button>'
 	      }
 	    }
+		,
+	    {
+	      breakpoint: 740,
+	      settings: {
+	        slidesToShow: 1,
+	        slidesToScroll: 1,
+	        infinite: true,
+	        dots: false,
+	        prevArrow: '<button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="display: block;"></button>',
+			nextArrow: '<button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;"></button>'
+	      }
+	    }
     ]
 });
 
@@ -353,6 +365,17 @@ $('.bestsellers-slider').slick({
 	        prevArrow: '<button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="display: block;"></button>',
 			nextArrow: '<button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;"></button>'
 	      }
+	    },
+	    {
+	      breakpoint: 740,
+	      settings: {
+	        slidesToShow: 1,
+	        slidesToScroll: 1,
+	        infinite: true,
+	        dots: false,
+	        prevArrow: '<button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="display: block;"></button>',
+			nextArrow: '<button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;"></button>'
+	      }
 	    }
     ]
 });
@@ -363,7 +386,43 @@ $('.may-like').slick({
 	slidesToShow: 4,
 	slidesToScroll: 4,
 	prevArrow: '<button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="display: block;"></button>',
-	nextArrow: '<button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;"></button>'
+	nextArrow: '<button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;"></button>',
+	responsive: [
+	    {
+	      breakpoint: 1100,
+	      settings: {
+	        slidesToShow: 3,
+	        slidesToScroll: 3,
+	        infinite: true,
+	        dots: false,
+	        prevArrow: '<button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="display: block;"></button>',
+			nextArrow: '<button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;"></button>'
+	      }
+	    },
+	    {
+	      breakpoint: 1000,
+	      settings: {
+	        slidesToShow: 2,
+	        slidesToScroll: 2,
+	        infinite: true,
+	        dots: false,
+	        prevArrow: '<button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="display: block;"></button>',
+			nextArrow: '<button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;"></button>'
+	      }
+	    },
+	    {
+	      breakpoint: 740,
+	      settings: {
+	        slidesToShow: 1,
+	        slidesToScroll: 1,
+	        infinite: true,
+	        dots: false,
+	        prevArrow: '<button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="display: block;"></button>',
+			nextArrow: '<button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;"></button>'
+	      }
+	    }
+    ]
+
 });
 
 //
@@ -899,7 +958,7 @@ $(document).on('click', '.user-info__save-user-block', function(event) {
 /* mobile menu button */
 
 if (windowWidth < windowWidth_1) {
-	
+
 }
 
 $(document).on('click', '.inner-menu__open-btn', function(event) {

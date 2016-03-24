@@ -14,6 +14,7 @@ body {
 	font-size: 16px;
 	background-color: $bg-color-0;
 	color: $font-color-1;
+	position: relative;
 	//overflow-x: hidden;
 }
 
@@ -22,6 +23,7 @@ body.scrolled {
 	//
 	header {
 		position: fixed;
+		top: 0;
 	}
 }
 
@@ -552,6 +554,7 @@ header {
 
 .header-content {
 	height: 38px;
+	position: relative;
 }
 
 .navigation {
@@ -2615,7 +2618,7 @@ input {outline: none;}
 	float: left; position: absolute; bottom: 0; left: 0; z-index: 2;
 	width: 674px;
 	padding: 0 70px 60px 70px;
-	background-color: rgba(255, 255, 255, 0.4);
+	background-color: rgba(255, 255, 255, 0.6);
 	box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.2);
 	box-sizing: border-box;
 }
@@ -2771,7 +2774,7 @@ input {outline: none;}
 	float: left; position: absolute; top: 70px; left: 0; margin: auto; z-index: 2;
 	width: 826px;
 	padding: 0 140px 60px 70px;
-	background-color: rgba(255, 255, 255, 0.4);
+	background-color: rgba(255, 255, 255, 0.6);
 	box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.2);
 	box-sizing: border-box;
 }
@@ -3474,18 +3477,19 @@ input {outline: none;}
 
 .mobile-element {
 	display: none;
-	
+
 }
 
 .inner-menu__open-btn {
 	width: 38px; height: 38px; cursor: pointer;
-	background: #000;
+	background: url(../img/icons/menu.png) no-repeat center;
+	background-size: 24px 24px;
 	float: left;
 	z-index: 200;
 }
 
 .navigation {
-	display: none;
+	//display: none;
 	//
 	&.open {
 		display: block;
